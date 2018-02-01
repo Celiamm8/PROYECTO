@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <style>
     header{
       background-color: black;
@@ -18,27 +19,19 @@
       #navbarSupportedContent{
         margin-left: 40%;
       }
-      html, body{
-        height: 100%;
+      #pie{
+        margin-top: 30%;
       }
-      body{
-        font-family: Lucida, sans-serif;
-        display: flex;
-        flex-direction: column;
+      footer{
+        clear: both;
+        text-align: center;
+        padding: 20px;
+        border-top: 2px solid black;
+        width: 100%;
       }
-      #contenido{
-        flex: 1 0 auto;
+      #mapa{
+        width: 25%;
       }
-      section {
-        padding: 10px;
-      }
-      header{
-        margin-bottom: 10px;
-      }
-      footer {
-        padding: 5px;
-      }
-
     </style>
 </head>
 
@@ -90,18 +83,26 @@
             </div>
         </div>
     </div>
-    <div  id="pie" class="row w-100 bg-dark text-white justify-content-center"> <!--Convierte el div en una fila -->
+    <div  id="pie" class="row bg-dark text-white ">
       <footer></footer>
       <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
-        <h1>Contacto</h1>
-        <a href="#"></a>
+        <h1>Contacta</h1>
+        <i class="fas fa-phone fa-2x"></i>
+        <a href="tel:+34555000555">555-000-555</a><br>
+        <i class="fas fa-at fa-2x"></i>
+        <a href="mail:correo@gmail.com">correo@gmail.com</a>
       </div>
       <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
         <h1>Servicios</h1>
+        <a href="#">Desarrollo web</a><br>
+        <a href="#">Desarrollo cliente</a><br>
+        <a href="#">Desarrollo Servidor</a>
       </div>
       <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
         <h1>Oficinas</h1>
+        <img id="mapa" src="imagen.png" alt="mapa">
       </div>
+
     </div>
   </div>
 
