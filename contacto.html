@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>Contacto</title>
+    <style>
+    *{
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+    header{
+      background-color: black;
+    }
+      #logo{
+        width: 10%;
+        padding: 2%;
+      }
+      #titulo{
+        vertical-align: middle;
+      }
+      #navbarSupportedContent{
+        margin-left: 40%;
+      }
+      #pie{
+        margin-top: 30%;
+      }
+      footer{
+        clear: both;
+        text-align: center;
+        padding: 20px;
+        border-top: 2px solid black;
+        width: 100%;
+      }
+      #mapa{
+        width: 25%;
+      }
+      .contenido{
+        max-width: 80%;
+        margin: auto;
+        margin-top: 15%;
+        text-align: center;
+      }
+
+      .contacto{
+        text-align: center;
+        padding: 5%;
+      }
+      .iconContacto{
+        padding: 2%;
+      }
+      .mapa{
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+    <div id="contenedor">
+        <div class="row">
+          <header class="menu w-100 position-fixed sticky-top">
+            <img id="logo" src="Logo.svg" alt="Logotipo de la pagina web">
+            <a id="titulo" class="navbar-brand" href="#"><h1>Titulo de la pagina</h1></a>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="QuienesSomos.html" id="navbarDropdown">Quienes Somos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Catalogo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Blog</a>
+                  </li>
+              </ul>
+          </div>
+        </nav>
+          </header>
+        </div>
+        <div class="contenido row pt-5">
+            <div class="formulario col-xl-12 col-lg-9 col-md-9 col-sm-9">
+              <h1>Solicita tu presupuesto</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Nombre*">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Apellidos*">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Empresa">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Email*">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Telefono*">
+                </div>
+                <div class="form-group">
+                  <textarea type="text" class="form-control" rows="5" placeholder="Explicanos tu proyecto*"></textarea>
+                </div>
+                <button type="submit" class="col-lg-12 col-md-12 col-sm-12 col-12 btn btn-success">Enviar</button>
+              </form>
+            </div>
+            <div class="contacto col-xl-12">
+              <h1>Contacto</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="iconContacto row">
+                  <div class="col-lg-3">
+                    <i class="fas fa-phone fa-2x"></i>
+                    <a href="tel:+34555000555">555-000-555</a>
+                  </div>
+                  <div class="col-lg-3">
+                    <i class="fas fa-at fa-2x"></i>
+                    <a href="mail:correo@gmail.com">correo@gmail.com</a>
+                  </div>
+                  <div class="col-lg-3">
+                    <i class="fas fa-at fa-2x"></i>
+                    <a href="mail:correo@gmail.com">Calle Juan de Garay, 32, Valencia</a>
+                  </div>
+                  <div class="col-lg-3">
+                    <i class="fas fa-at fa-2x"></i>
+                    <a href="mail:correo@gmail.com">Horario: Lunes-Viernes de 9:00-18:00</a>
+                  </div>
+                </div>
+                <div class="row col-lg-12">
+                  <img src="map.jpg" alt="" class="mapa">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  id="pie" class="row bg-dark text-white ">
+      <footer></footer>
+      <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <h1>Contacta</h1>
+        <i class="fas fa-phone fa-2x"></i>
+        <a href="tel:+34555000555">555-000-555</a><br>
+        <i class="fas fa-at fa-2x"></i>
+        <a href="mail:correo@gmail.com">correo@gmail.com</a>
+      </div>
+      <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <h1>Servicios</h1>
+        <a href="#">Desarrollo web</a><br>
+        <a href="#">Desarrollo cliente</a><br>
+        <a href="#">Desarrollo Servidor</a>
+      </div>
+      <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <h1>Oficinas</h1>
+        <img id="mapa" src="imagen.png" alt="mapa">
+      </div>
+
+    </div>
+  </div>
+
+    <!-- Inserta aquí los JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
