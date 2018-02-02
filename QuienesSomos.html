@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     <style>
     header{
       background-color: black;
@@ -36,18 +38,94 @@
         margin-top: 20%;
       }
       #cont h1{
-        margin-left: 50%;
+        margin-left: 45%;
       }
       #cont img{
-        width: 40%;
+        width: 20%;
+        height: 20%;
       }
-      #cont .javi{
-        margin-left: 15%;
+     #javi{
+        margin-left: 30%;
       }
-      .desarrolladores{
-        padding-left: 5%;
+
+      .infoEmpresa{
+        margin-top: 150px;
+      }
+      #cont p{
+        margin-left: 30%;
+        margin-bottom: -300px;
+      }
+      #javi:hover{
+
+      }
+      #eric:hover{
+
+      }
+      #celia:hover{
+
+      }
+      .javi{
+        background-color: red;
+        width: 20%;
+        height: 20%;
+        margin-left: 30%;
+        display: none;
+      }
+      .eric{
+        background-color: blue;
+        width: 20%;
+        height: 20%;
+        display: none;
+      }
+      .celia{
+        background-color: red;
+        width: 20%;
+        height: 20%;
+        display: none;
+      }
+      .comentario{
+      border-radius: 5px;
+      background-color: chocolate;
+      color: floralwhite;
+      padding: 10px;
+      width: 420px;
+      font-family: 'Indie Flower', cursive;
+      font-size: 2em;
+      }
+
+      .comentario:before {
+      content:"";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-bottom: 20px solid chocolate;
+      border-right: 18px solid transparent;
+      border-left: 18px solid transparent;
+      margin: -30px 0 0 40px;
+      }
+      #avatar{
+        width: 2%;
+        height: 2%;
+      }
+      .comentariosPositivos{
+        margin-top:250px;
+        margin-left: 2%;
       }
     </style>
+    <script type="text/javascript">
+      	$(document).ready(function() {
+          $('[data-toggle="tooltip"]').tooltip();
+          $('#javi').hover(function(){
+            $('.javi').css("display","block");
+          });
+          $('#eric').hover(function(){
+            $('.eric').css("display","block");
+          });
+          $('#celia').hover(function(){
+            $('.celia').css("display","block");
+          });
+        });
+    </script>
 </head>
 
 <body>
@@ -86,15 +164,22 @@
             <div class="col-xl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9">
               <section class="row">
                 <h1>Desarrolladores:</h1>
-                <article class="desarrolladores javi col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <img src="javi.jpg" alt="Javi">
-                </article>
-                <article class="eric col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <img src="eric.jpg" alt="Eric">
-                </article>
-                <article class="celia col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <img src="celia.jpg" alt="Celia">
-                </article>
+                <img id="javi" src="javi.jpg" alt="Javi" data-toggle="tooltip" data-placement="bottom" title="Javi!">
+                <img id="eric" src="eric.jpg" alt="Eric" data-toggle="tooltip" data-placement="bottom" title="Eric!">
+                <img id="celia" src="celia.jpg" alt="Celia" data-toggle="tooltip" data-placement="bottom" title="Celia!">
+                <div class="javi"></div>
+                <div class="eric"></div>
+                <div class="celia"></div>
+              </section>
+              <section class="row infoEmpresa">
+                <h1>Información de la empresa</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+              </section>
+              <section class="row comentariosPositivos">
+                <img id="avatar" src="av1.png" alt="avatar">
+                <div class="comentario">
+                Me encanta esta pagina!!!!
+                </div>
               </section>
             </div>
         </div>
