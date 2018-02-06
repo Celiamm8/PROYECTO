@@ -46,7 +46,10 @@
       }
      #javi{
         margin-left: 30%;
+        padding: 0PX;
+        margin-right: 0%;
       }
+
       .infoEmpresa{
         margin-top: 150px;
       }
@@ -55,30 +58,34 @@
         margin-bottom: -300px;
       }
       #javi:hover{
+
       }
       #eric:hover{
+
       }
       #celia:hover{
+
       }
       .javi{
         background-color: red;
         width: 20%;
         height: 20%;
-        /* display: none; */
+        margin-left: 30%;
+        display: none;
       }
       .eric{
         background-color: blue;
         width: 20%;
         height: 20%;
-        /* display: none; */
+        display: none;
       }
       .celia{
         background-color: red;
         width: 20%;
         height: 20%;
-        /* display: none; */
+        display: none;
       }
-      .comentario{
+      #resultado{
       border-radius: 5px;
       background-color: chocolate;
       color: floralwhite;
@@ -87,7 +94,8 @@
       font-family: 'Indie Flower', cursive;
       font-size: 2em;
       }
-      .comentario:before {
+
+      #resultado:before {
       content:"";
       position: absolute;
       width: 0;
@@ -109,58 +117,36 @@
         margin-top:250px;
         margin-left: 2%;
       }
-      .wBasica{
-        margin-top: 150px;
-        margin-left: 20%;
-        border: 1px solid red;
-        background-color: red;
-        color: white;
-      }
-      .WAlojamiento{
-        margin-top: 150px;
-        margin-left: 0.5%;
-        border: 1px solid #FFCA28;
-        background-color: #FFCA28;
-        color: white;
-      }
-      .WAlojamientoSeo{
-        margin-top: 150px;
-        margin-left: 0.5%;
-        border: 1px solid green;
-        background-color: green;
-        color: white;
-      }
     </style>
     <script type="text/javascript">
       	$(document).ready(function() {
           $('[data-toggle="tooltip"]').tooltip();
-          $('#celia').click(function(){
-            $(location.assign("celia.html"));
+          $('#javi').hover(function(){
+            $('.javi').css("display","block");
           });
-          $('#javi').click(function(){
-            $(window.open("javi.html"));
+          $('#eric').hover(function(){
+            $('.eric').css("display","block");
           });
-          $('#eric').click(function(){
-            $(window.open("eric.html"));
+          $('#celia').hover(function(){
+            $('.celia').css("display","block");
           });
         });
 
-        // var xhr = new XMLHttpRequest();
-        // onload = function(){
-        //     var str = Math.floor(Math.random() * (5 - 1)) + 1;
-        //     console.log(str);
-        //     xhr.open("GET","php/comments.php?stmt=" + str, true);
-        //     xhr.onreadystatechange = function(){
-        //       if (xhr.readyState == 4 && xhr.status == 200){
-        //         resultado.innerHTML = xhr.responseText;
-        //       }
-        //     }
-        //     xhr.send();
-        //
-        // }
+        var xhr = new XMLHttpRequest();
+        onload = function(){
+            var str = Math.floor(Math.random() * (5 - 1)) + 1;
+            console.log(str);
+            xhr.open("GET","php/comments.php?stmt=" + str, true);
+            xhr.onreadystatechange = function(){
+              if (xhr.readyState == 4 && xhr.status == 200){
+                resultado.innerHTML = xhr.responseText;
+              }
+            }
+            xhr.send();
 
-
+        }
     </script>
+
 </head>
 
 <body>
@@ -169,7 +155,8 @@
         <div class="row">
           <header class="menu w-100 position-fixed sticky-top">
             <img id="logo" src="Logo.png" alt="Logotipo de la pagina web">
-            <a id="titulo" class="navbar-brand" href="#">Titulo de la pagina</a>
+            <a id="titulo" class="navbar-brand" href="home.html"><h1>Titulo de la pagina</h1></a>
+
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -203,9 +190,12 @@
             <div class="col-xl-9 col-xl-9 col-lg-9 col-md-9 col-sm-9">
               <section class="row">
                 <h1>Desarrolladores:</h1>
-                  <img id="javi" src="javi.jpg" alt="Javi"  data-toggle="tooltip" data-placement="bottom" title="Javier Dart Belenguer. Desarrollador web">
-                  <img id="eric" src="eric.jpg" alt="Eric"  data-toggle="tooltip" data-placement="bottom" title="Eric!">
-                  <img id="celia" src="celia.jpg" alt="Celia"  data-toggle="tooltip" data-placement="bottom" title="Celia!">
+                <a id="javi" href="#"><img  src="javi.jpg" alt="Javi" data-toggle="tooltip" data-placement="bottom" title="Javier Dart Belenguer. Desarrollador web"></a>
+                <a id="eric" href="#"><img  src="eric.jpg" alt="Eric" data-toggle="tooltip" data-placement="bottom" title="Eric!"></a>
+                <a id="celia" href="#"><img  src="celia.jpg" alt="Celia" data-toggle="tooltip" data-placement="bottom" title="Celia!"></a>
+                <!-- <div class="javi"></div>
+                <div class="eric"></div>
+                <div class="celia"></div> -->
               </section>
               <section class="row infoEmpresa">
                 <h1>Información de la empresa</h1>
@@ -214,31 +204,13 @@
               <section class="row comentariosPositivos">
                 <img id="avatar" src="av1.png" alt="avatar">
                 <div id="resultado">
+
                 </div>
               </section>
               <section class="row comentariosNegativos">
                 <img id="avatar" src="av1.png" alt="avatar">
                 <div id="resultado">
-                </div>
-              </section>
-              <section class="row infoPrecios">
-                <div class="wBasica col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                  <h3>WEB BASICA</h3><br>
-                  <h5>PERO MUY COMPLETA</h5>
-                  <h1>400 €</h1>
-                  <div class="">
 
-                  </div>
-                </div>
-                <div class="WAlojamiento col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                  <h3>WEB CON ALOJAMIENTO</h3><br>
-                  <h5>TODO LO QUE NECESITAS</h5>
-                  <h1>451 €</h1>
-                </div>
-                <div class="WAlojamientoSeo col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                  <h3>WEB CON ALOJAMIENTO Y SEO</h3><br>
-                  <h5>¡ DESPEGA !</h5>
-                  <h1>551 €</h1>
                 </div>
               </section>
             </div>

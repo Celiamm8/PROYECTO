@@ -97,10 +97,10 @@ INSERT INTO `products`(`product_id`, `category_id`,`brand_id`, `name`, `descript
   (4,4,4,'Nutella','Crema de cacao 350 gr', '/img/botenutella.jpg', 2.99, NULL);
 
 INSERT INTO `comments`(`user_id`, `product_id`,`rating`, `title`, `body`) VALUES
-  (1,1,5, 'Los mejores', 'Nunca defraudan, soy fiel a esta marca'),
-  (2,1,4, 'Esperaba más', 'No están mal, pero por el precio esperaba más calidad'),
-  (3,2,3, 'Volumen escaso', 'La marca se supone que es de confianza, pero el sonido de esta radio es demasiado bajo'),
-  (3,4,5 , 'Excelente', 'Mataría por mi Nutella');
+  (1,1,5, 'Los mejores', 'Nunca defraudan,realizan muy bien lo estipulado'),
+  (2,1,4, 'No esperaba más', 'No están mal, equiparan el precio a la calidad'),
+  (3,2,3, 'No me gusta', 'No quisieron hacer mi pagina de gatitos'),
+  (3,4,5 , 'Excelente', 'Mataría por un trabajo suyo');
 
 INSERT INTO `shoppingcarts`(`user_id`, `product_id`,`item_number`) VALUES
   (1,1,1),
