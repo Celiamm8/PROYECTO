@@ -12,8 +12,7 @@
       background-color: black;
     }
       #logo{
-        width: 10%;
-        padding: 2%;
+        width: 15%;
       }
       #titulo{
         margin-left: 45%;
@@ -25,7 +24,6 @@
       footer{
         clear: both;
        text-align: center;
-         padding: 20px;
           border-top: 2px solid #999999;
           width: 100%;
       }
@@ -49,7 +47,7 @@
             text-align: center;
           }
           .primero{
-            margin-top: 15%;
+
           }
           .somosdiferente{
             margin-top: -100px;
@@ -95,9 +93,6 @@
           height: 200px;
           margin-left: 2%;
 
-
-
-
         }
         #corp{
           margin-top: 60%;
@@ -105,25 +100,53 @@
           height: 200px;
           margin-left: 2%;
 
-
-
         }
         .fondo{
           width: 100%;
-          height: 70%;
-          margin-top: -80px;
-           z-index: -1;
+          height: 400px;
+          margin-top: 73px;
+          position: absolute;
+          z-index: -1;
         }
         .botones{
-          /* margin-top: 50%; */
-             z-index: 1;
+          margin-top: 230px;
+          width: 100%;
+        }
+        .boton1{
+          float:right;
+          width: 2%;
+          height: 10%;
+          opacity: 0.5;
+          background-color: black;
+          border-color: black;
+          color: white;
+          font-weight: bold;
+          font-size: 1.4em;
+        }
+        .boton2{
+          float: left;
+          margin-left: 3%;
+          width: 2%;
+          height: 10%;
+          opacity: 0.5;
+          background-color: black;
+          border-color: black;
+          color: white;
+          font-weight: bold;
+          font-size: 1.4em;
 
         }
+        .boton1:hover,.boton2:hover{
+          opacity:0.7;
 
-
+        }
+        #navbar{
+          height: 120px;
+        }
+        .contacto{
+          margin-top: 400px;
+        }
     </style>
-
-
 </head>
 
 <body>
@@ -133,8 +156,8 @@
           <header class="menu w-100 position-fixed sticky-top">
 
             <!-- <a id="titulo" class="navbar-brand" href="#">JECDESIGN</a> -->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <img id="logo" src="inicio/Logo.png" alt="Logotipo de la pagina web">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+                <img id="logo" src="inicio/logo1.png" alt="Logotipo de la pagina web">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
               </button>
@@ -159,35 +182,29 @@
           </header>
         </div>
 
-            <div class="contenido row pt-5">
-                      <div class="primero col-xl-12 col-lg-12 col-md-12 col-sm-12">
+        <div class="contenido row pt-5">
 
-                        <img src="inicio/fondo.jpg" alt="" class="fondo">
-                        <div class="botones">
-                          <button type="button" name="button" class="boton2"> < </button>
-                            <button type="button" name="button" class="boton1"> > </button>
+          <div class="primero row col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <img src="inicio/fondo.jpg" alt="" class="fondo">
+              <div class="botones">
+                <button type="button" name="button" class="boton2"> <i class="fas fa-angle-left"></i> </button>
+                <button type="button" name="button" class="boton1"> <i class="fas fa-angle-right"></i> </button>
+              </div>
+            </div>
 
-                        </div>
+            <div class="contacto col-xl-12">
+              <p>Después de mucho esfuerzo todo tiene su recompesas,por eso somos una empresa con una
+                gran iniciativa en el mundo digital, difrutamos de lo que hacemos.</p>
+            </div>
 
-
-
-                      </div>
-                      <div class="contacto col-xl-12">
-                        <p>Después de mucho esfuerzo todo tiene su recompesas,por eso somos una empresa con una
-                          gran iniciativa en el mundo digital, difrutamos de lo que hacemos.</p>
-
-
-                      </div>
-
-                  <div class="somosdiferente col-xl-12">
-                      <h2>SOMOS DIFERENTES</h2>
-                      <p>Dedicamos muchas horas a innovar</p>
-                      <p>solucionamos problemas y creamos todo aquello que quieras reflejar en una web</p>
-                      <p>para una gran satisfaccion para nuestros clientes</p>
-                          <img src="inicio/img1.png" alt="">
-                          <h2>SERVICIOS</h2>
-
-                  </div>
+            <div class="somosdiferente col-xl-12">
+              <h2>SOMOS DIFERENTES</h2>
+              <p>Dedicamos muchas horas a innovar</p>
+              <p>solucionamos problemas y creamos todo aquello que quieras reflejar en una web</p>
+              <p>para una gran satisfaccion para nuestros clientes</p>
+              <img src="inicio/img1.png" alt="">
+              <h2>SERVICIOS</h2>
+            </div>
 
 
 
