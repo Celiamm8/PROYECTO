@@ -12,7 +12,7 @@
       background-color: black;
     }
       #logo{
-        width: 10%;
+        width: 15%;
         padding: 2%;
       }
       #titulo{
@@ -137,7 +137,7 @@
       .social {
 	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
 	left: 0%; /* Establecemos la barra en la izquierda */
-	top: 250px; /* Bajamos la barra 200px de arriba a abajo */
+	top: 250px; /* Bajamos la barra 250px de arriba a abajo */
 	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
 }
 	.social ul {
@@ -148,14 +148,14 @@
 		display: inline-block;
 		color:#fff;
 		background: #000;
-		padding: 10px 15px;
+		padding: 15px 15px;
 		text-decoration: none;
 		-webkit-transition:all 500ms ease;
 		-o-transition:all 500ms ease;
 		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
 	}
-	.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
-	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-facebook {background:#3b5998; }
+	.social ul li .icon-twitter {background: #00abf0; }
 	.social ul li .icon-googleplus {background: #d95232;}
 	.social ul li .icon-pinterest {background: #ae181f;}
 	.social ul li .icon-mail {background: #666666;}
@@ -198,10 +198,8 @@
     <div id="contenido">
         <div class="row">
           <header class="menu w-100 position-fixed sticky-top">
-            <img id="logo" src="Logo.png" alt="Logotipo de la pagina web">
-            <a id="titulo" class="navbar-brand" href="#">Titulo de la pagina</a>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
+              <img id="logo" src="quienesSomos/logo1.png" alt="Logotipo de la pagina web">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
               </button>
@@ -233,16 +231,16 @@
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
               <section class="row">
                 <h1>Desarrolladores:</h1>
-                  <img id="javi" src="javi.jpg" alt="Javi"  data-toggle="tooltip" data-placement="bottom" title="Javier Dart Belenguer. Desarrollador web">
-                  <img id="eric" src="eric.jpg" alt="Eric"  data-toggle="tooltip" data-placement="bottom" title="Eric!">
-                  <img id="celia" src="celia.jpg" alt="Celia"  data-toggle="tooltip" data-placement="bottom" title="Celia!">
+                  <img id="javi" src="quienesSomos/javi.jpg" alt="Javi"  data-toggle="tooltip" data-placement="bottom" title="Javier Dart Belenguer. Desarrollador web">
+                  <img id="eric" src="quienesSomos/eric.jpg" alt="Eric"  data-toggle="tooltip" data-placement="bottom" title="Eric!">
+                  <img id="celia" src="quienesSomos/celia.jpg" alt="Celia"  data-toggle="tooltip" data-placement="bottom" title="Celia!">
               </section>
               <div class="social">
 		              <ul>
 			                 <li><a href="http://www.facebook.com/" target="_blank" class="icon-facebook"><i class="fab fa-facebook-f"></i></a></li>
 			                 <li><a href="http://www.twitter.com/" target="_blank" class="icon-twitter"><i class="fab fa-twitter"></i></a></li>
 			                 <li><a href="http://www.googleplus.com/" target="_blank" class="icon-googleplus"><i class="fab fa-google-plus"></i></a></li>
-			                 <li><a href="http://www.pinterest.coms" target="_blank" class="icon-pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+			                 <li><a href="http://www.pinterest.com/" target="_blank" class="icon-pinterest"><i class="fab fa-pinterest-p"></i></a></li>
 			                 <li><a href="mailto:" class="icon-mail"><i class="fas fa-envelope-open"></i></a></li>
 		             </ul>
 	           </div>
@@ -252,36 +250,16 @@
               </section>
               <section class="row comments">
                 <div class="comentariosPositivos col-xl-5 col-lg-5 col-md-5 col-sm-5">
-                  <img id="avatar" src="av1.png" alt="avatar">
+                  <img id="avatar" src="quienesSomos/av1.png" alt="avatar">
                   <div id="resultado" class="comentario">
                     Me encanta!
                   </div>
                 </div>
                 <div class="comentariosNegativos col-xl-5 col-lg-5 col-md-5 col-sm-5">
-                  <img id="avatar" src="av1.png" alt="avatar">
+                  <img id="avatar" src="quienesSomos/av1.png" alt="avatar">
                   <div id="resultado" class="comentario">
                     Les odio!
                   </div>
-                </div>
-              </section>
-              <section class="row infoPrecios">
-                <div class="wBasica col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                  <h3>WEB BASICA</h3><br>
-                  <h5>PERO MUY COMPLETA</h5>
-                  <h1>400 €</h1>
-                  <div class="">
-
-                  </div>
-                </div>
-                <div class="WAlojamiento col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                  <h3>WEB CON ALOJAMIENTO</h3><br>
-                  <h5>TODO LO QUE NECESITAS</h5>
-                  <h1>451 €</h1>
-                </div>
-                <div class="WAlojamientoSeo col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                  <h3>WEB CON ALOJAMIENTO Y SEO</h3><br>
-                  <h5>¡ DESPEGA !</h5>
-                  <h1>551 €</h1>
                 </div>
               </section>
             </div>
@@ -304,7 +282,7 @@
       </div>
       <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
         <h1>Oficinas</h1>
-        <img id="mapa" src="imagen.png" alt="mapa">
+        <img id="mapa" src="quienesSomos/imagen.png" alt="mapa">
       </div>
 
     </div>

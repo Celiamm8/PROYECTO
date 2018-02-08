@@ -6,6 +6,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
     <style>
     header{
       background-color: black;
@@ -89,6 +92,20 @@
           margin-top: -200px;
 
         }
+        .catalogo img{
+         margin-left: 18%;
+         width: 60%;
+         height: 40%;
+         margin-top: 30%;
+       }
+       .trabajos{
+         margin-top: 30%;
+         margin-left: 18%;
+       }
+       .catalogo:hover{
+          color: grey;
+          opacity: 0.4;
+       }
         #seo{
           margin-top: 60%;
           width: 70%;
@@ -105,16 +122,16 @@
         }
         .fondo{
           width: 100%;
-          height: 400px;
+          height: 500px;
           margin-top: 73px;
           position: absolute;
           z-index: -1;
         }
         .botones{
-          margin-top: 230px;
+          margin-top: 250px;
           width: 100%;
         }
-        .boton1{
+        .derecha{
           float:right;
           width: 2%;
           height: 10%;
@@ -125,7 +142,7 @@
           font-weight: bold;
           font-size: 1.4em;
         }
-        .boton2{
+        .izquierda{
           float: left;
           margin-left: 3%;
           width: 2%;
@@ -138,15 +155,27 @@
           font-size: 1.4em;
 
         }
-        .boton1:hover,.boton2:hover{
+        .izquierda:hover,.derecha:hover{
           opacity:0.7;
-
         }
         #navbar{
           height: 120px;
         }
         .contacto{
-          margin-top: 400px;
+          position:absolute;
+          z-index: 1;
+          color: white;
+          margin-top: 120px;
+          width: 80%;
+        }
+        .contacto h1{
+          margin-bottom: 20px;
+        }
+        .somosdiferente{
+          margin-top: 130px;
+        }
+        .ocultar{
+
         }
         .catalogo img{
           margin-left: 18%;
@@ -163,9 +192,38 @@
            opacity: 0.4;
         }
     </style>
+<<<<<<< HEAD
 
 
 
+=======
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // $(".tercera,.segunda").css("display","none");
+        $(".tercera").hide();
+        $(".segunda").hide();
+        var contador = 0;
+        $(".izquierda").click(function(){
+          contador++;
+          if (contador==1) {
+            // $(".segunda").css("display","block");
+            // $(".primera").css("display","none");
+            $(".primera").hide();
+            $(".segunda").fadeIn();
+
+          }else if (contador==2) {
+            // $(".tercera").css("display","block");
+            // $(".segunda").css("display","none");
+
+          }else if (contador>2) {
+            // $(".primera").css("display","block");
+            // $(".tercera").css("display","none");
+            contador=0;
+          }
+        })
+      });
+    </script>
+>>>>>>> e1c7ff720f4803930c6d98b4608e25891069e372
 </head>
 
 <body>
@@ -221,12 +279,35 @@
           <div class="primero row col-xl-12 col-lg-12 col-md-12 col-sm-12">
               <img src="inicio/fondo.jpg" alt="" class="fondo">
               <div class="botones">
-                <button type="button" name="button" class="boton2"> <i class="fas fa-angle-left"></i> </button>
-                <button type="button" name="button" class="boton1"> <i class="fas fa-angle-right"></i> </button>
+                <button type="button" name="button" class="izquierda"> <i class="fas fa-angle-left"></i> </button>
+                <button type="button" name="button" class="derecha"> <i class="fas fa-angle-right"></i> </button>
               </div>
             </div>
 
+<<<<<<< HEAD
             <div class="somosdiferente col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+=======
+            <div class="contacto row col-xl-5 offset-xl-5">
+              <div class="primera">
+                <h1>HOLA :)</h1>
+                <p>Somos <em>JECDesign</em> una empresa joven y emprendedora, nos dedicamos al servicio de desarrollo y diseño web.
+                  Somos tres personas que estudiamos juntos aun que cada uno ha seguido un camino distinto para especializarse en lo suyo.
+                  Asi que decidimos al acabar nuestros estudios en montar nuestra propia empresa ya que teniamos diversos gustos y habilidades
+                  a la hora de desarrollar una Web.
+                  Después de mucho esfuerzo todo tiene su recompesas, por eso somos una empresa con una
+                  gran iniciativa en el mundo digital, difrutamos de lo que hacemos.</p>
+              </div>
+              <div class="segunda">
+                <p>segunda</p>
+              </div>
+              <div class="tercera">
+                <p>tercero</p>
+              </div>
+              </div>
+
+
+            <div class="somosdiferente col-xl-12">
+>>>>>>> e1c7ff720f4803930c6d98b4608e25891069e372
               <h2>SOMOS DIFERENTES</h2>
               <p>Dedicamos muchas horas a innovar</p>
               <p>solucionamos problemas y creamos todo aquello que quieras reflejar en una web</p>
@@ -254,10 +335,25 @@
                    </div>
                        <hr>
 
+<<<<<<< HEAD
                             
 
                    <div class="row">
                        <h2 class="trabajos">ALGUNOS TRABAJOS</h2>
+=======
+                   <div class="row">
+                     <h2 class="trabajos">ALGUNOS TRABAJOS</h2>
+                    <div class="catalogo col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                      <img src="inicio/clinica.jpg" alt="" id="clinica">
+                    </div>
+                    <div class="catalogo col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                      <img src="inicio/cafeteria.jpg" alt="">
+                    </div>
+                    <div class="catalogo col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                      <img src="inicio/moda.jpg" alt="">
+                    </div>
+                  </div>
+>>>>>>> e1c7ff720f4803930c6d98b4608e25891069e372
 
                      <div class="catalogo col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                        <img src="inicio/clinica.jpg" alt="" id="clinica">
@@ -300,7 +396,11 @@
   </div>
 
     <!-- Inserta aquí los JS -->
+<<<<<<< HEAD
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+=======
+
+>>>>>>> e1c7ff720f4803930c6d98b4608e25891069e372
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
