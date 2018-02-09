@@ -19,7 +19,7 @@
         margin-left: 45%;
       }
       #navbarSupportedContent{
-        margin-left: 40%;
+        margin-left: 35%;
       }
       #pie{
         margin-top: 30%;
@@ -54,13 +54,7 @@
         margin-left: 30%;
         margin-bottom: -300px;
       }
-      #javi:hover{
-      }
-      #eric:hover{
-      }
-      #celia:hover{
-      }
-      .javi{
+        .javi{
         background-color: red;
         width: 20%;
         height: 20%;
@@ -109,35 +103,15 @@
         margin-top:250px;
         margin-left: 1%;
       }
-      .wBasica{
-        margin-top: 150px;
-        margin-left: 20%;
-        border: 1px solid red;
-        background-color: red;
-        color: white;
-      }
-      .WAlojamiento{
-        margin-top: 150px;
-        margin-left: 0.5%;
-        border: 1px solid #FFCA28;
-        background-color: #FFCA28;
-        color: white;
-      }
-      .WAlojamientoSeo{
-        margin-top: 150px;
-        margin-left: 0.5%;
-        border: 1px solid green;
-        background-color: green;
-        color: white;
-      }
+
       .comments{
         margin-left: 35%;
       }
       /**/
       .social {
 	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-	left: 0%; /* Establecemos la barra en la izquierda */
-	top: 250px; /* Bajamos la barra 250px de arriba a abajo */
+	margin-left: 0%; /* Establecemos la barra en la izquierda */
+	top: 40%; /* Bajamos la barra 250px de arriba a abajo */
 	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
 }
 	.social ul {
@@ -145,6 +119,7 @@
     margin-left: 0%;
 	}
 	.social ul li a {
+    margin-left: 0%;
 		display: inline-block;
 		color:#fff;
 		background: #000;
@@ -163,6 +138,10 @@
 		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
 		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
 	}
+  .migas{
+    margin-top: 200px;
+    margin-bottom: -200px;
+  }
     </style>
     <script type="text/javascript">
       	$(document).ready(function() {
@@ -207,6 +186,9 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
+                    <a class="nav-link" href="inicio.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
                     <a class="nav-link" href="#">Servicios</a>
                   </li>
                   <li class="nav-item">
@@ -227,6 +209,12 @@
         </nav>
           </header>
         </div>
+        <aside class="migas">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item active"><a href="#">Quienes somos</a></li>
+          </ol>
+        </aside>
         <div id="cont" class="row pt-5">
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
               <section class="row">
@@ -289,7 +277,7 @@
   </div>
 
     <!-- Inserta aquí los JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 

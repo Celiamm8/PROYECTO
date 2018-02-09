@@ -1,0 +1,63 @@
+/*CSS DEL REPRODUCTOR PERSONALIZADO*/
+.mute{
+background: url('spritesAudio.png') no-repeat -0px -0px;
+width: 128px;
+height: 128px;
+float:left;
+}
+.menosVol{
+width: 128px;
+height: 128px;
+background: url("spritesAudio.png") no-repeat -264px -0px;
+float:left;
+}
+.masVol{
+width: 128px;
+height: 128px;
+background: url("spritesAudio.png") no-repeat -133px -0px;
+float:left;
+}
+.play{
+background: url("spritesAudio.png") no-repeat -400px -0px;
+width: 127px;
+height: 127px;
+float:left;
+}
+.stop{
+background: url("spritesAudio.png") no-repeat -528px -0px;
+width: 129px;
+height: 129px;
+float:left;
+}
+
+
+.mute:hover{
+background: url('spritesAudioHolder.png') no-repeat -0px -0px;
+width: 128px;
+height: 128px;
+float:left;
+}
+.menosVol:hover{
+width: 128px;
+height: 128px;
+background: url("spritesAudioHolder.png") no-repeat -264px -0px;
+float:left;
+}
+.masVol:hover{
+width: 128px;
+height: 128px;
+background: url("spritesAudioHolder.png") no-repeat -133px -0px;
+float:left;
+}
+.stop:hover{
+background: url("spritesAudioHolder.png") no-repeat -530px -0px;
+width: 129px;
+height: 129px;
+float:left;
+}
+.play:hover{
+background: url("spritesAudioHolder.png") no-repeat -398px -0px;
+width: 127px;
+height: 127px;
+float:left;
+}
