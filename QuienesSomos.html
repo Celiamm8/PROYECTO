@@ -107,41 +107,13 @@
       .comments{
         margin-left: 35%;
       }
-      /**/
-      .social {
-	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-	margin-left: 0%; /* Establecemos la barra en la izquierda */
-	top: 40%; /* Bajamos la barra 250px de arriba a abajo */
-	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
-}
-	.social ul {
-		list-style: none;
-    margin-left: 0%;
-	}
-	.social ul li a {
-    margin-left: 0%;
-		display: inline-block;
-		color:#fff;
-		background: #000;
-		padding: 15px 15px;
-		text-decoration: none;
-		-webkit-transition:all 500ms ease;
-		-o-transition:all 500ms ease;
-		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
-	}
-	.social ul li .icon-facebook {background:#3b5998; }
-	.social ul li .icon-twitter {background: #00abf0; }
-	.social ul li .icon-googleplus {background: #d95232;}
-	.social ul li .icon-pinterest {background: #ae181f;}
-	.social ul li .icon-mail {background: #666666;}
-	.social ul li a:hover {
-		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
-		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
-	}
-  .migas{
+
+
+
+  /* .migas{
     margin-top: 200px;
     margin-bottom: -200px;
-  }
+  } */
     </style>
     <script type="text/javascript">
       	$(document).ready(function() {
@@ -202,19 +174,15 @@
                   </li>
               </ul>
           </div>
-          <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-                  <button class="btn btn-info my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-          </form>
         </nav>
           </header>
         </div>
-        <aside class="migas">
+        <!-- <aside class="migas">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Inicio</a></li>
             <li class="breadcrumb-item active"><a href="#">Quienes somos</a></li>
           </ol>
-        </aside>
+        </aside> -->
         <div id="cont" class="row pt-5">
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
               <section class="row">
@@ -223,15 +191,7 @@
                   <img id="eric" src="quienesSomos/eric.jpg" alt="Eric"  data-toggle="tooltip" data-placement="bottom" title="Eric!">
                   <img id="celia" src="quienesSomos/celia.jpg" alt="Celia"  data-toggle="tooltip" data-placement="bottom" title="Celia!">
               </section>
-              <div class="social">
-		              <ul>
-			                 <li><a href="http://www.facebook.com/" target="_blank" class="icon-facebook"><i class="fab fa-facebook-f"></i></a></li>
-			                 <li><a href="http://www.twitter.com/" target="_blank" class="icon-twitter"><i class="fab fa-twitter"></i></a></li>
-			                 <li><a href="http://www.googleplus.com/" target="_blank" class="icon-googleplus"><i class="fab fa-google-plus"></i></a></li>
-			                 <li><a href="http://www.pinterest.com/" target="_blank" class="icon-pinterest"><i class="fab fa-pinterest-p"></i></a></li>
-			                 <li><a href="mailto:" class="icon-mail"><i class="fas fa-envelope-open"></i></a></li>
-		             </ul>
-	           </div>
+
               <section class="row infoEmpresa">
                 <h1>Información de la empresa</h1>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>

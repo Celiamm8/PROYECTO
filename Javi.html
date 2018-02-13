@@ -26,7 +26,56 @@
 
 
     </script>
+    <style media="screen">
+    .fondo{
+      width: 100%;
+      height: 500px;
+      margin-top: 73px;
+      position: absolute;
+      z-index: -1;
+    }
+.botones{
+      margin-top: 250px;
+      width: 100%;
+    }
+    .derecha{
+      float:right;
+      width: 2%;
+      height: 10%;
+      opacity: 0.5;
+      background-color: black;
+      border-color: black;
+      color: white;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+.izquierda{
+      float: left;
+      margin-left: 3%;
+      width: 2%;
+      height: 10%;
+      opacity: 0.5;
+      background-color: black;
+      border-color: black;
+      color: white;
+      font-weight: bold;
+      font-size: 1.4em;
 
+    }
+    .izquierda:hover,.derecha:hover{
+      opacity:0.7;
+    }
+.contacto{
+      position:absolute;
+      z-index: 1;
+      color: white;
+      margin-top: 120px;
+      width: 80%;
+    }
+    .contacto h1{
+      margin-bottom: 20px;
+    }
+    </style>
 </head>
 
 <body>
@@ -34,7 +83,7 @@
     <div id="contenido">
         <div class="row">
           <header class="menu w-100 position-fixed sticky-top">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
               <img id="logo" src="quienesSomos/logo1.png" alt="Logotipo de la pagina web">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -68,10 +117,6 @@
                   </li>
               </ul>
           </div>
-          <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-                  <button class="btn btn-info my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-          </form>
         </nav>
           </header>
         </div>
@@ -81,47 +126,77 @@
                 <article class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                   <img src="quienesSomos/javi.jpg" alt="" id="Javi">
                   <h2>JAVIER</h2>
-                  <p>En los proyectos me gusta dedicarme a la parte de animaciones, musica y video. Utilizo CSS3 , HTML5 y JQUERY. <br> Tengo una actitud reservada, soy observador , meticuloso, metodico y paciente. Me gusta la logica y soy autodidacta. Me considero una persona centrada con toques de "sana locura".</p>
+                  <p>En los proyectos suelo dedicarme a la parte de animaciones, música y video. Utilizo CSS3 , HTML5 y JQUERY. <br> Tengo una actitud reservada. Soy: observador, meticuloso, metódico, paciente y autodidacta. Me gusta la lógica y me considero una persona centrada con toques de "sana locura".</p>
                 </article>
                 <article class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                   <h3 id="proyectos">PROYECTOS REALIZADOS</h3>
-                  <img src="javi/foto1.jpg" alt="" class="foto" id="foto1">
-                  <!-- <img src="javi/imagen.png" alt="" id="infoFoto1"> -->
-                  <img src="javi/foto2.jpg" alt="" class="foto" id="foto2">
-                  <!-- <p>Proyecto realizado para una bodega</p> -->
-                  <img src="javi/foto3.jpg" alt="" class="foto" id="foto3">
-                  <!-- <p>Proyecto realizado para una tienda de ropa</p> -->
+                  <div class="primero row col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                      <img src="javi/proy1.png" alt="" class="fondo">
+                      <div class="botones">
+                        <button type="button" name="button" class="izquierda"> <i class="fas fa-angle-left"></i> </button>
+                        <button type="button" name="button" class="derecha"> <i class="fas fa-angle-right"></i> </button>
+                      </div>
+                    </div>
+                    <div class="contacto row col-xl-5 offset-xl-5">
+                      <div class="primera">
+
+                      </div>
+                      <div class="segunda">
+
+                      </div>
+                      <div class="tercera">
+
+                      </div>
+                    </div>
                 </article>
-                <div class="dropdown-divider"></div>
+
                 <article class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
                   <div class="comentario">
                     <p>"Some people want something to happen, others dream of it happening , others make it happen" <strong>Michael Jordan</strong></p>
                   </div>
                 </article>
+                <div class="social">
+  		              <ul>
+  			                 <li><a href="https://www.facebook.com/javier.elnuevo.9" target="_blank" class="icon-facebook"><i class="fab fa-facebook-f"></i></a></li>
+  			                 <li><a href="https://twitter.com/MrSubconsciente" target="_blank" class="icon-twitter"><i class="fab fa-twitter"></i></a></li>
+  			                 <li><a href="https://plus.google.com/u/0/113554313451333214332" target="_blank" class="icon-googleplus"><i class="fab fa-google-plus"></i></a></li>
+  			                 <li><a href="https://www.pinterest.es/javinico08/" target="_blank" class="icon-pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+  			                 <li><a href="mailto:javinico08@gmail.com" class="icon-mail"><i class="fas fa-envelope-open"></i></a></li>
+  		             </ul>
+  	           </div>
                 <article class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
                   <div class="reproductor">
                     <audio id="player">
-                         <!-- Audio Ogg -->
+
                          <source src="javi/audio/.ogg" type="audio/ogg">
-                         <!-- Audio MP3 -->
+
                          <source src="javi/audio/.mp3" type="audio/mpeg"/>
                      </audio>
-                     <div class="contenedor as">
-                       <span class="masVol" onclick="document.getElementById('player').volume+=0.1"></span>
-                       <span class="menosVol" onclick="document.getElementById('player').volume-=0.1"></span>
-                       <span class="play" onclick="document.getElementById('player').play()"></span>
-                       <span class="mute" onclick="mute()"></span>
-                       <span class="stop" onclick="document.getElementById('player').pause()"></span>
+                     <div class="btn-group">
+                       <a class="masVol" onclick="document.getElementById('player').volume+=0.1" class="btn btn-inverse"><i class="icon-white glyphicon glyphicon-plus-sign"></i></a>
+                       <a class="mute" onclick="mute()" class="btn btn-inverse"><i class="icon-white icon-stop"></i></a>
+                       <a class="play" onclick="document.getElementById('player').play()" class="btn btn-inverse"><i class="icon-white icon-play"></i></a>
+                       <a class="pause" onclick="document.getElementById('player').pause()" class="btn btn-inverse"><i class="icon-white icon-pause"></i></a>
+                       <a class="menosVol" onclick="document.getElementById('player').volume-=0.1" class="btn btn-inverse"><i class="icon-white glyphicon glyphicon-minus-sign"></i></a>
                      </div>
                   </div>
+
                 </article>
-
-
-
-
-
+                <article class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                  <div class="mensajesDirectos ">
+                      <br style="clear:both">
+                      <div class="form-group col-md-4 ">
+                        <label id="messageLabel" for="message">Escribe tu mensaje directo</label>
+                        <textarea class="form-control input-sm " type="textarea" id="mensaje" placeholder="Mensaje..." maxlength="140" rows="7"></textarea>
+                        <span class="help-block"><p id="mensajeInferior" class="help-block ">El maximo de caracteres es 140.</p></span>
+                      </div>
+                      <br style="clear:both">
+                      <div class="form-group col-md-2">
+                        <button class="form-control input-sm btn btn-success disabled" id="btnSubmit" name="btnSubmit" type="button" style="height:35px"> Enviar</button>
+                      </div>
+                  </div>
+                </article>
               </section>
-            </div>
         </div>
     </div>
     <div  id="pie" class="row bg-dark text-white ">
