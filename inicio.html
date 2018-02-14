@@ -22,36 +22,39 @@
       #navbarSupportedContent{
         margin-left: 20%;
       }
-
-      footer{
-        clear: both;
-       text-align: center;
-          border-top: 2px solid #999999;
-          width: 100%;
-
+      #contenido{
+        width: 100%;
       }
           h2{
              margin-top:200px;
              margin-right:  10%;
              padding-left:  20%;
           }
-          #pie{
-            margin-top: 50%;
-
-          }
+          html {
+            position: relative;
+             min-height: 100%;
+           }
+            body {
+               margin-bottom: 60px;
+            }
+           .footer {
+               position: absolute;
+                bottom: 0;
+              width: 100%;
+              height: 100px;
+                line-height: 30px;
+               background-color: #f5f5f5;
+             s}
           #mapa{
             width: 25%;
           }
-
           .primero h1{
-
             color:  #62C0D5;
           }
           .contenido{
             text-align: center;
           }
           .primero{
-
           }
           .somosdiferente{
             margin-bottom: 20%;
@@ -65,7 +68,6 @@
           height: 200px;
           margin-left: 2%;
           margin-top: -5px;
-
         }
         #cms{
           margin-top: 60%;
@@ -73,9 +75,6 @@
           height: 200px;
           margin-left: 2%;
           margin-top: -5px;
-
-
-
         }
         #web{
           margin-top: 60%;
@@ -83,14 +82,11 @@
           height: 200px;
           margin-left: 2%;
           margin-top: -5px;
-
-
         }
         .servicios1{
            margin-bottom: -30%;
           padding: 0px;
           margin-top: -200px;
-
         }
         .catalogo img{
          margin-left: 18%;
@@ -111,14 +107,12 @@
           width: 70%;
           height: 200px;
           margin-left: 2%;
-
         }
         #corp{
           margin-top: 60%;
           width: 70%;
           height: 200px;
           margin-left: 2%;
-
         }
         .fondo{
           width: 100%;
@@ -153,7 +147,6 @@
           color: white;
           font-weight: bold;
           font-size: 1.4em;
-
         }
         .izquierda:hover,.derecha:hover{
           opacity:0.7;
@@ -175,7 +168,6 @@
           margin-top: 130px;
         }
         .ocultar{
-
         }
         .catalogo img{
           margin-left: 18%;
@@ -191,30 +183,27 @@
            color: grey;
            opacity: 0.4;
         }
+        .parrafo{
+          width: 60%;
+          height: 40%;
+          margin-left: 30%;
+        }
+
     </style>
-<<<<<<< HEAD
-
-
-
-=======
     <script type="text/javascript">
       $(document).ready(function() {
-        // $(".tercera,.segunda").css("display","none");
-        $(".tercera").hide();
-        $(".segunda").hide();
+        $(".tercera,.segunda").css("display","none");
+        // $(".tercera").hide();
+        // $(".segunda").hide();
         var contador = 0;
         $(".izquierda").click(function(){
           contador++;
           if (contador==1) {
-            // $(".segunda").css("display","block");
-            // $(".primera").css("display","none");
             $(".primera").hide();
-            $(".segunda").fadeIn();
-
+            $(".segunda").fadeIn(2000);
           }else if (contador==2) {
             // $(".tercera").css("display","block");
             // $(".segunda").css("display","none");
-
           }else if (contador>2) {
             // $(".primera").css("display","block");
             // $(".tercera").css("display","none");
@@ -223,7 +212,7 @@
         })
       });
     </script>
->>>>>>> e1c7ff720f4803930c6d98b4608e25891069e372
+
 </head>
 
 <body>
@@ -247,7 +236,7 @@
               <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Quienes Somos</a>
+                    <a class="nav-link dropdown-toggle" href="QuienesSomos.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Quienes Somos</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="Eric.html">Eric</a>
                       <a class="dropdown-item" href="Celia.html">Celia</a>
@@ -276,7 +265,7 @@
 
         <div class="contenido row pt-5">
 
-          <div class="primero row col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <div class="primero row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <img src="inicio/fondo.jpg" alt="" class="fondo">
               <div class="botones">
                 <button type="button" name="button" class="izquierda"> <i class="fas fa-angle-left"></i> </button>
@@ -284,9 +273,9 @@
               </div>
             </div>
 
-<<<<<<< HEAD
-            <div class="somosdiferente col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-=======
+
+
+
             <div class="contacto row col-xl-5 offset-xl-5">
               <div class="primera">
                 <h1>HOLA :)</h1>
@@ -298,7 +287,11 @@
                   gran iniciativa en el mundo digital, difrutamos de lo que hacemos.</p>
               </div>
               <div class="segunda">
-                <p>segunda</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                   nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                   esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
               <div class="tercera">
                 <p>tercero</p>
@@ -307,7 +300,6 @@
 
 
             <div class="somosdiferente col-xl-12">
->>>>>>> e1c7ff720f4803930c6d98b4608e25891069e372
               <h2>SOMOS DIFERENTES</h2>
               <p>Dedicamos muchas horas a innovar</p>
               <p>solucionamos problemas y creamos todo aquello que quieras reflejar en una web</p>
@@ -316,7 +308,7 @@
               <h2>SERVICIOS</h2>
             </div>
 
-                     <div class="servicios1 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                    <div class="servicios1 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                        <img src="inicio/tiendaOnline.png" alt="" id="tienda">
                      </div>
                      <div class="servicios1 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
@@ -330,81 +322,62 @@
                      </div>
                      <div class="servicios1 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                          <img src="inicio/corporativa.png" alt="" id="corp">
-                     </div>
+                    </div>
 
-                   </div>
-                       <hr>
 
-<<<<<<< HEAD
-                            
 
-                   <div class="row">
-                       <h2 class="trabajos">ALGUNOS TRABAJOS</h2>
-=======
                    <div class="row">
                      <h2 class="trabajos">ALGUNOS TRABAJOS</h2>
                     <div class="catalogo col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                       <img src="inicio/clinica.jpg" alt="" id="clinica">
+                      <p class="parrafo">Diseño y Desarrollo Web. Proyecto realizado para una Clinica Dental</p>
                     </div>
                     <div class="catalogo col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                       <img src="inicio/cafeteria.jpg" alt="">
+                      <p class="parrafo">Diseño y Desarrollo Web. Proyecto realizado para una cafetería.</p>
                     </div>
                     <div class="catalogo col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
                       <img src="inicio/moda.jpg" alt="">
+                      <p class="parrafo">Diseño y Desarrollo Web. Proyecto realizado para una tienda de moda</p>
                     </div>
                   </div>
->>>>>>> e1c7ff720f4803930c6d98b4608e25891069e372
-
-                     <div class="catalogo col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                       <img src="inicio/clinica.jpg" alt="" id="clinica">
-
-                     </div>
-                     <div class="catalogo col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                       <img src="inicio/cafeteria.jpg" alt="">
-
-                     </div>
-                     <div class="catalogo col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                       <img src="inicio/moda.jpg" alt="">
-
-                     </div>
-
-                   </div>
 
 
 
-    <div  id="pie" class="row bg-dark text-white ">
-      <footer></footer>
-      <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
-        <h1>Contacta</h1>
-        <i class="fas fa-phone fa-2x"></i>
-        <a href="tel:+34555000555">555-000-555</a><br>
-        <i class="fas fa-at fa-2x"></i>
-        <a href="mail:correo@gmail.com">correo@gmail.com</a>
-      </div>
-      <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
-        <h1>Servicios</h1>
-        <a href="#">Desarrollo web</a><br>
-        <a href="#">Desarrollo cliente</a><br>
-        <a href="#">Desarrollo Servidor</a>
-      </div>
-      <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
-        <h1>Oficinas</h1>
-        <img id="mapa" src="map.jpg" alt="mapa">
-      </div>
+</div>
+<footer class="footer">
+   <div class="container">
+     <div  id="pie" class="row bg-dark text-white ">
 
-    </div>
+       <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+         <h1>Contacta</h1>
+         <i class="fas fa-phone fa-2x"></i>
+         <a href="tel:+34555000555">555-000-555</a><br>
+         <i class="fas fa-at fa-2x"></i>
+         <a href="mail:correo@gmail.com">correo@gmail.com</a>
+       </div>
+       <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+         <h1>Servicios</h1>
+         <a href="#">Desarrollo web</a><br>
+         <a href="#">Desarrollo cliente</a><br>
+         <a href="#">Desarrollo Servidor</a>
+       </div>
+       <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+         <h1>Oficinas</h1>
+         <img id="mapa" src="map.jpg" alt="mapa">
+       </div>
+
+     </div>
+
+   </div>
+ </footer>
+
+
   </div>
-
-    <!-- Inserta aquí los JS -->
-<<<<<<< HEAD
+</div>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
-=======
-
->>>>>>> e1c7ff720f4803930c6d98b4608e25891069e372
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-
 </body>
 
 </html>

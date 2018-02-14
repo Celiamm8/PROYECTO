@@ -2,11 +2,14 @@
 <head>
     <title>CELIA</title>
     <meta charset="UTF-8">
-     <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+
     <style>
     header{
       background-color: black;
@@ -25,7 +28,7 @@
       #celia{
         margin-top: 200px;
         width: 20%;
-        height: 20%;
+        height: 30%;
         margin-left: 20%;
         float: left;
         padding-right: 1%;
@@ -36,77 +39,120 @@
       footer{
         clear: both;
        text-align: center;
-        
+
           border-top: 2px solid #999999;
           width: 100%;
       }
-          h2{
-             margin-top:200px;
-             margin-right:  10%;
-             padding-left:  20%;
-          }
+
           #pie{
-            margin-top: 30%;
+            margin-top: 70%;
           }
           #mapa{
             width: 25%;
           }
-         .roja{
-           border: 1px solid black;
-           background: red;
-           width: 50px;
-           height: 25px;
-         }
-         .foto{
-           width: 250px;
-           height: 250px;
-           margin-top: 10%;
-           margin-left: 10%;
-         }
-         #proyectos{
-            margin-top: 10%;
-            margin-left: 35%;
-         }
-         iframe{
-           margin-top: -250px;
-           margin-left: 50%;
-         }
-         .comentario{
-        border-radius: 5px;
-        background-color: #62C0D5;
-        color: floralwhite;
-        padding: 10px;
-        width: 420px;
-        font-family: 'Indie Flower', cursive;
-        font-size: 2em;
-        margin-left: 10%;
-        margin-top: 15%
-        }
+          .icono{
+            margin-right: 15%;
+          }
 
-        .comentario:before {
-        content:"";
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-bottom: 20px solid ;
-        border-right: 18px solid transparent;
-        border-left: 18px solid transparent;
 
+
+        #navbar{
+          height: 120px;
         }
+        .container{
+           margin-top: 15%;
+        }
+        * {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 30px;
+}
+.container .thumbex {
+  margin: 10px 20px 30px;
+  width: 100%;
+  min-width: 250px;
+  max-width: 435px;
+  height: 300px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  /* outline: 2px solid white; */
+  outline-offset: -15px;
+  background-color: blue;
+  box-shadow: 5px 10px 40px 5px rgba(0, 0, 0, 0.5);
+}
+.container .thumbex .thumbnail {
+  overflow: hidden;
+  min-width: 250px;
+  height: 300px;
+  position: relative;
+  opacity: 0.88;
+  backface-visibility: hidden;
+  transition: all 0.4s ease-out;
+}
+.container .thumbex .thumbnail img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  height: 115%;
+  width: auto;
+  transform: translate(-50%, -50%);
+  backface-visibility: hidden;
+}
+.container .thumbex .thumbnail span {
+  position: absolute;
+  z-index: 2;
+  top: calc(150px - 20px);
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 50px;
+  margin: 0 45px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.2px;
+  transition: all 0.3s ease-out;
+}
+.container .thumbex .thumbnail:hover {
+  backface-visibility: hidden;
+  transform: scale(1.15, 1.15);
+  opacity: 1;
+}
+.container .thumbex .thumbnail:hover span {
+  opacity: 0;
+}
+
 
     </style>
     <script type="text/javascript">
-      $(document).ready(function(){
-        $('#foto1').click(function(){
-          $('.foto').slideToggle('slow'){
-            $(this).html('Proyecto realizado par una cafetería');
-          }
 
-        });
+        $(function(){
 
+    	var
+    	w       = 500,
+    	h       = 700,
+    	l       = (screen.availWidth - w) / 2,
+    	t       = (screen.availHeight - h) / 2,
+    	popPage = '.icono';
 
-      });
+    	$(popPage).on('click',function(event){
+    		window.open(this.href,"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
+    		 return false;
+    	});
 
+    });
 
     </script>
 </head>
@@ -116,9 +162,7 @@
     <div id="contenido">
         <div class="row">
           <header class="menu w-100 position-fixed sticky-top">
-
-
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
               <img id="logo" src="logo1.png" alt="Logotipo de la pagina web">
 
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -145,39 +189,50 @@
 
               </ul>
           </div>
+          <a href="registro.html" class="icono"> <i class="fas fa-user fa-2x "  ></i></a>
+          <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+          <a href="#"><i class="fab fa-google-plus-square fa-2x"></i></a>
+          <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+
+
         </nav>
           </header>
         </div>
-        <div class="row pt-5">
-            <div class="">
-              <section class="row">
-                <article class="">
+        <div class="row">
 
-                     <img src="celia.jpg" alt="" id="celia">
-                     <h2>CELIA</h2>
-                     <p>Me dedico normalmente a la parte de Diseño Web en los proyectos, siendo mi especialidad CSS y HTML5.Me considero una persona trabajadora tanto en el área familiar como en mi profesión .</p>
-
-                     <h3 id="proyectos">PROYECTOS REALIZADOS</h3>
-                     <img src="celia/foto1.jpg" alt="" class="foto" id="foto1">
-                     <!-- <p>Proyecto realizado para una cafetería.</p> -->
-                     <img src="celia/foto2.jpg" alt="" class="foto" id="foto2">
-                     <!-- <p>Proyecto realizado para una bodega</p> -->
-                     <img src="celia/foto3.png" alt="" class="foto" id="foto3">
-                     <!-- <p>Proyecto realizado para una tienda de ropa</p> -->
-                     <div class="comentario">
-                       <p>"   Las fortalezas están en nuestras diferencias, no en nuestras similitudes <strong>Stephen Covey"</strong></p>
-
-                     </div>
-                     <iframe width="560" height="315" src="https://www.youtube.com/embed/NJ8jxvzzzeQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="celia col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+               <img src="quienesSomos/celia.jpg" id="celia" >
 
 
-
-
-
-              </section>
             </div>
-        </div>
-    </div>
+              </div>
+
+
+            <div class="container">
+              <h2>AlGUNOS PROYECTOS</h2>
+            <div class="row col-lg-12 col-md-12 col-sm-12 col-12">
+              <div class="thumbex">
+               <div class="thumbnail"><a href="#"> <img src="Celia/foto1.jpg"/><span>DISEÑO</span></a></div>
+                </div>
+               <div class="thumbex">
+                  <div class="thumbnail"><a href="#"><img src="Celia/foto2.jpg"/><span>Desarrollo</span></a></div>
+                  </div>
+             <div class="thumbex">
+                  <div class="thumbnail"><a href="#"><img src="Celia/foto3.png" /><span>WEB</span></a></div>
+            </div>
+            </div>
+
+            </div>
+              </div>
+
+
+
+
+
+
+            </div>
+
+
     <div  id="pie" class="row bg-dark text-white ">
       <footer></footer>
       <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
@@ -202,7 +257,9 @@
   </div>
 
     <!-- Inserta aquí los JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 

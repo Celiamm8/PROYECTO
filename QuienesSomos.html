@@ -3,6 +3,7 @@
     <title>Quienes somos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,13 +14,11 @@
     }
       #logo{
         width: 15%;
-        padding: 2%;
+        padding: 0px;
       }
-      #titulo{
-        margin-left: 45%;
-      }
+
       #navbarSupportedContent{
-        margin-left: 40%;
+        margin-left: 20%;
       }
       #pie{
         margin-top: 30%;
@@ -31,6 +30,9 @@
         border-top: 2px solid black;
         width: 100%;
       }
+      /* #navbar{
+        height: 120px;
+      } */
       #mapa{
         width: 25%;
       }
@@ -163,6 +165,12 @@
 		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
 		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
 	}
+  #login{
+
+    margin-top: 5%;
+
+  }
+
     </style>
     <script type="text/javascript">
       	$(document).ready(function() {
@@ -190,6 +198,21 @@
         //     xhr.send();
         //
         // }
+        $(function(){
+
+    	var
+    	w       = 500,
+    	h       = 700,
+    	l       = (screen.availWidth - w) / 2,
+    	t       = (screen.availHeight - h) / 2,
+    	popPage = '.icono';
+
+    	$(popPage).on('click',function(event){
+    		window.open(this.href,"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
+    		 return false;
+    	});
+
+    });
     </script>
 </head>
 
@@ -198,7 +221,7 @@
     <div id="contenido">
         <div class="row">
           <header class="menu w-100 position-fixed sticky-top">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
               <img id="logo" src="quienesSomos/logo1.png" alt="Logotipo de la pagina web">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -220,10 +243,31 @@
                   </li>
               </ul>
           </div>
-          <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-                  <button class="btn btn-info my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-          </form>
+          <a href="registro.html" class="icono"> <i class="fas fa-user fa-2x "  ></i></a>
+          <nav class="navbar navbar-default">
+
+
+
+    <div class="collapse navbar-collapse" id="login">
+
+      <form id="signin" class="navbar-form navbar-right" role="form">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="email" type="email" class="form-control" name="email" value="" placeholder="Correo Electronico">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Contraseña">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                   </form>
+
+             </div>
+
+        </nav>
+
         </nav>
           </header>
         </div>
@@ -244,6 +288,10 @@
 			                 <li><a href="mailto:" class="icon-mail"><i class="fas fa-envelope-open"></i></a></li>
 		             </ul>
 	           </div>
+
+
+
+
               <section class="row infoEmpresa">
                 <h1>Información de la empresa</h1>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>

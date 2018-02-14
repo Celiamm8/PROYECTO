@@ -1,0 +1,258 @@
+<!DOCTYPE html><html class=''>
+<head>
+<script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script>
+<script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script>
+<script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script>
+<meta charset='UTF-8'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/shamim539/pen/OxPXdv?depth=everything&order=popularity&page=13&q=vue+js&show_forks=false" />
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
+<style media="screen">
+header{
+  background-color: black;
+}
+  #logo{
+    width: 10%;
+    margin-left: 60px;
+
+  }
+  #titulo{
+    margin-left: 45%;
+  }
+  #navbarSupportedContent{
+    margin-left: 20%;
+  }
+  #celia{
+    margin-top: 200px;
+    width: 20%;
+    height: 20%;
+    margin-left: 20%;
+    float: left;
+    padding-right: 1%;
+
+
+
+  }
+  footer{
+    clear: both;
+   text-align: center;
+
+      border-top: 2px solid #999999;
+      width: 100%;
+  }
+
+      #pie{
+        margin-top: 30%;
+      }
+      #mapa{
+        width: 25%;
+      }
+
+
+    #login{
+      margin-right: 20%;
+      margin-top: 5%;
+
+    }
+    #navbar{
+      height: 120px;
+    }
+</style>
+
+<style class="cp-pen-styles">
+
+#carousel3d .carousel-3d-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+#carousel3d .carousel-3d-slide.current {
+  background-color: #333;
+  color: #fff;
+}
+#carousel3d .carousel-3d-slide.current span {
+  font-size: 20px;
+  font-weight: 500;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+
+var
+w       = 500,
+h       = 700,
+l       = (screen.availWidth - w) / 2,
+t       = (screen.availHeight - h) / 2,
+popPage = '.icono';
+
+$(popPage).on('click',function(event){
+window.open(this.href,"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
+ return false;
+});
+
+});
+
+</script>
+</head>
+<body>
+  <div class="container-fluid">
+  <div id="contenido">
+      <div class="row">
+        <header class="menu w-100 position-fixed sticky-top">
+
+
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+            <img id="logo" src="logo1.png" alt="Logotipo de la pagina web">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link " href="#">Inicio</a>
+              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="navbarDropdown">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Blog</a>
+                </li>
+
+            </ul>
+        </div>
+        <a href="registro.html" class="icono"> <i class="fas fa-user fa-2x "  ></i></a>
+        <nav class="navbar navbar-default">
+
+
+
+  <div class="collapse navbar-collapse" id="login">
+
+    <form id="signin" class="navbar-form navbar-right" role="form">
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                          <input id="email" type="email" class="form-control" name="email" value="" placeholder="Correo Electronico">
+                      </div>
+
+                      <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                          <input id="password" type="password" class="form-control" name="password" value="" placeholder="Contraseña">
+                      </div>
+
+                      <button type="submit" class="btn btn-primary">Entrar</button>
+                 </form>
+
+           </div>
+
+      </nav>
+      </nav>
+        </header>
+      </div>
+<div id="carousel3d">
+  <carousel-3d :perspective="0" :space="200" :display="5" :controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="60" :clickable="true" :autoplay="true" :autoplay-timeout="5000">
+    <slide :index="0">
+      <span class="title">Web Development</span>
+      <p>Sed ut perspiciatis unde
+omnis iste natus error sit volupta
+tem accusantium dolorem</p>
+    </slide>
+		<slide :index="1">
+
+        <span class="title">Web Design</span>
+        <p>Sed ut perspiciatis unde
+omnis iste natus error sit volupta
+tem accusantium dolorem</p>
+    </slide>
+		<slide :index="2">
+      <span class="title">You know</span>
+      <p>You know, being a test pilot isn't always the healthiest business in the world.</p>
+    </slide>
+		<slide :index="3">
+      <span class="title">You know</span>
+      <p>You know, being a test pilot isn't always the healthiest business in the world.</p>
+    </slide>
+		<slide :index="4">
+     <span class="title">You know</span>
+      <p>You know, being a test pilot isn't always the healthiest business in the world.</p>
+    </slide>
+		<slide :index="5">
+      <span class="title">You know</span>
+      <p>You know, being a test pilot isn't always the healthiest business in the world.</p>
+    </slide>
+		<slide :index="6">
+      <span class="title">You know</span>
+      <p>You know, being a test pilot isn't always the healthiest business in the world.</p>
+    </slide>
+
+  </carousel-3d>
+</div>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.7/vue.js'></script><script src='https://rawgit.com/Wlada/vue-carousel-3d/master/dist/vue-carousel-3d.min.js'></script>
+<script >new Vue({
+  el: '#carousel3d',
+  data: {
+    slides: 7
+  },
+  components: {
+    'carousel-3d': Carousel3d.Carousel3d,
+    'slide': Carousel3d.Slide
+  }
+})
+//# sourceURL=pen.js
+</script>
+<div  id="pie" class="row bg-dark text-white ">
+  <footer></footer>
+  <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+    <h1>Contacta</h1>
+    <i class="fas fa-phone fa-2x"></i>
+    <a href="tel:+34555000555">555-000-555</a><br>
+    <i class="fas fa-at fa-2x"></i>
+    <a href="mail:correo@gmail.com">correo@gmail.com</a>
+  </div>
+  <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+    <h1>Servicios</h1>
+    <a href="#">Desarrollo web</a><br>
+    <a href="#">Desarrollo cliente</a><br>
+    <a href="#">Desarrollo Servidor</a>
+  </div>
+  <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+    <h1>Oficinas</h1>
+    <img id="mapa" src="map.jpg" alt="mapa">
+  </div>
+
+</div>
+</div>
+
+<!-- Inserta aquí los JS -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+</html>
