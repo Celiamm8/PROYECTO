@@ -1,122 +1,17 @@
 <html>
 <head>
-    <title>Quienes somos</title>
+    <title>Quienes Somos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
-    <style>
-    header{
-      background-color: black;
-    }
-      #logo{
-        width: 15%;
-        padding: 2%;
-      }
-      #titulo{
-        margin-left: 45%;
-      }
-      #navbarSupportedContent{
-        margin-left: 35%;
-      }
-      #pie{
-        margin-top: 30%;
-      }
-      footer{
-        clear: both;
-        text-align: center;
-        padding: 20px;
-        border-top: 2px solid black;
-        width: 100%;
-      }
-      #mapa{
-        width: 25%;
-      }
-      #cont{
-        margin-top: 20%;
-      }
-      #cont h1{
-        margin-left: 45%;
-      }
-      #cont img{
-        width: 20%;
-        height: 20%;
-      }
-     #javi{
-        margin-left: 30%;
-      }
-      .infoEmpresa{
-        margin-top: 150px;
-      }
-      #cont p{
-        margin-left: 30%;
-        margin-bottom: -300px;
-      }
-        .javi{
-        background-color: red;
-        width: 20%;
-        height: 20%;
-        /* display: none; */
-      }
-      .eric{
-        background-color: blue;
-        width: 20%;
-        height: 20%;
-        /* display: none; */
-      }
-      .celia{
-        background-color: red;
-        width: 20%;
-        height: 20%;
-        /* display: none; */
-      }
-      .comentario{
-      border-radius: 5px;
-      background-color: chocolate;
-      color: floralwhite;
-      padding: 10px;
-      width: 65%;
-      font-family: 'Indie Flower', cursive;
-      font-size: 2em;
-      }
-      .comentario:before {
-      content:"";
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-bottom: 20px solid chocolate;
-      border-right: 18px solid transparent;
-      border-left: 18px solid transparent;
-      margin: -30px 0 0 40px;
-      }
-      #avatar{
-        width: 2%;
-        height: 2%;
-      }
-      .comentariosPositivos{
-        margin-top:250px;
-        margin-left: 2%;
-      }
-      .comentariosNegativos{
-        margin-top:250px;
-        margin-left: 1%;
-      }
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/QuienesSomos.css">
 
-      .comments{
-        margin-left: 35%;
-      }
-
-
-
-  /* .migas{
-    margin-top: 200px;
-    margin-bottom: -200px;
-  } */
-    </style>
     <script type="text/javascript">
-      	$(document).ready(function() {
+        $(document).ready(function() {
           $('[data-toggle="tooltip"]').tooltip();
           $('#celia').click(function(){
             $(location.assign("celia.html"));
@@ -160,80 +55,104 @@
                   <li class="nav-item">
                     <a class="nav-link" href="inicio.html">Inicio</a>
                   </li>
+                  <div class="btn-group">
+                    <button href="#" type="button" class="btn navbar btn-dark">Quienes somos</button>
+                    <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="sr-only"></span>
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Javier</a>
+                      <a class="dropdown-item" href="#">Eric</a>
+                      <a class="dropdown-item" href="#">Celia</a>
+                    </div>
+                  </div>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Servicios</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Catalogo</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contacto.html" id="navbarDropdown">Contacto</a>
+                    <a class="nav-link" href="contacto.html">Contacto</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link disabled" href="#">Blog</a>
                   </li>
               </ul>
           </div>
+          <div class="usuario">
+            <ul>
+              <li><a href="#"><i class="fas fa-user"></i></a></li>
+            </ul>
+          </div>
+
         </nav>
           </header>
         </div>
-        <!-- <aside class="migas">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-            <li class="breadcrumb-item active"><a href="#">Quienes somos</a></li>
-          </ol>
-        </aside> -->
-        <div id="cont" class="row pt-5">
-            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-              <section class="row">
-                <h1>Desarrolladores:</h1>
-                  <img id="javi" src="quienesSomos/javi.jpg" alt="Javi"  data-toggle="tooltip" data-placement="bottom" title="Javier Dart Belenguer. Desarrollador web">
-                  <img id="eric" src="quienesSomos/eric.jpg" alt="Eric"  data-toggle="tooltip" data-placement="bottom" title="Eric!">
-                  <img id="celia" src="quienesSomos/celia.jpg" alt="Celia"  data-toggle="tooltip" data-placement="bottom" title="Celia!">
-              </section>
 
-              <section class="row infoEmpresa">
+        <div id="cont" class="row pt-5">
+            <div class="desarrolladores row col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <h1>Desarrolladores:</h1><br>
+                <img id="javi" src="quienesSomos/javi.png" alt="Javi"  data-toggle="tooltip" data-placement="bottom" title="Javier Dart Belenguer. Desarrollador web">
+                <img id="eric" src="quienesSomos/eric.png" alt="Eric"  data-toggle="tooltip" data-placement="bottom" title="Eric!">
+                <img id="celia" src="quienesSomos/celia.png" alt="Celia"  data-toggle="tooltip" data-placement="bottom" title="Celia!">
+              </div>
+
+              <div class="row infoEmpresa col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <h1>Información de la empresa</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-              </section>
-              <section class="row comments">
-                <div class="comentariosPositivos col-xl-5 col-lg-5 col-md-5 col-sm-5">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+              </div>
+              <div class="row comments col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="comments comentarios col-xl-6 col-lg-6 col-md-6 col-sm-12">
                   <img id="avatar" src="quienesSomos/av1.png" alt="avatar">
                   <div id="resultado" class="comentario">
                     Me encanta!
                   </div>
-                </div>
-                <div class="comentariosNegativos col-xl-5 col-lg-5 col-md-5 col-sm-5">
                   <img id="avatar" src="quienesSomos/av1.png" alt="avatar">
                   <div id="resultado" class="comentario">
                     Les odio!
                   </div>
                 </div>
-              </section>
-            </div>
+              </div>
+
+              <div class="row video col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                video
+              </div>
         </div>
     </div>
-    <div  id="pie" class="row bg-dark text-white ">
-      <footer></footer>
-      <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
-        <h1>Contacta</h1>
-        <i class="fas fa-phone fa-2x"></i>
-        <a href="tel:+34555000555">555-000-555</a><br>
-        <i class="fas fa-at fa-2x"></i>
-        <a href="mail:correo@gmail.com">correo@gmail.com</a>
+    <div  id="pie" class="row  bg-dark text-white ">
+      <div class="row col-xl-6 col-lg-6 col-md-6">
+        <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+          <h1>Contacta</h1>
+            <i class="fas fa-phone fa-2x"></i>
+            <a href="tel:+34555000555">555-000-555</a><br>
+            <i class="fas fa-at fa-2x"></i>
+            <a href="mail:correo@gmail.com">correo@gmail.com</a>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+          <h1>Servicios</h1>
+          <a href="#">Desarrollo web</a><br>
+          <a href="#">Desarrollo cliente</a><br>
+          <a href="#">Desarrollo Servidor</a>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+          <h1>Legalidad</h1>
+          <a href="#">Aviso legal</a><br>
+          <a href="#">Política de privacidad</a>
+        </div>
+        <div class="conocenos col-xl-12 col-lg-12 col-md-12">
+          <ul>
+             <li><a href="http://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+             <li><a href="http://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+             <li><a href="http://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+             <li><a href="http://plus.google.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+         </ul>
       </div>
-      <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
-        <h1>Servicios</h1>
-        <a href="#">Desarrollo web</a><br>
-        <a href="#">Desarrollo cliente</a><br>
-        <a href="#">Desarrollo Servidor</a>
-      </div>
-      <div class="col-xl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
-        <h1>Oficinas</h1>
-        <img id="mapa" src="quienesSomos/imagen.png" alt="mapa">
+    </div>
+      <div class="oficinas col-xl-3 col-lg-4 col-md-12">
+        <p id="coordenadas"></p>
+        <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=Madrid,Spain&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C39.4548243,-0.3957476&markers=color:green%7Clabel:G%7C39.985539,-0.0504106&markers=color:red%7Clabel:C%7C39.4560627,-0.4033149&markers=color:pink%7Clabel:C%7C38.8634349,-6.9862087&key=AIzaSyByt5uPw-KnKfQTNCaYgMQTkVY0-NpJ2u8" alt="mapa">
       </div>
 
     </div>
+
   </div>
 
     <!-- Inserta aquí los JS -->
