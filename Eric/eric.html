@@ -1,0 +1,438 @@
+<html>
+  <head>
+    <title>Eric</title>
+    <meta charset="UTF-8">
+     <!-- <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="bootstrap-4.0.0-beta.2-dist/js/popper.min.js" charset="utf-8"></script>
+    <script src="bootstrap-4.0.0-beta.2-dist/js/jquery-3.2.1.slim.min.js" charset="utf-8"></script>
+    <script src="bootstrap-4.0.0-beta.2-dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- slide de bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style media="screen">
+    *{
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+    html {
+     position: relative;
+     min-height: 100%;
+   }
+   body {
+     margin-bottom: 30px; /* Margin bottom by footer height */
+   }
+   #navbar{
+     height: 120px;
+   }
+   #logo{
+     width: 13%;
+   }
+   #pie {
+     position: absolute;
+     /* bottom: 0; */
+     width: 100%;
+     height: 240px; /* Set the fixed height of the footer here */
+     line-height: 30px; /* Vertically center the text there */
+   }
+   #contenido div{
+     margin-bottom: 3%;
+   }
+   .primero img{
+     width: 100%;
+     height: 500px;
+     position: absolute;
+     z-index: -1;
+   }
+   .primero{
+     clear: both;
+   }
+   .primero div{
+     margin-left: 8%;
+   }
+   .botones{
+     margin-top: 250px;
+     width: 100%;
+     margin-bottom: 300px;
+   }
+   .derecha{
+     float:right;
+     width: 2%;
+     height: 10%;
+     opacity: 0.5;
+     background-color: black;
+     border-color: black;
+     color: white;
+     font-weight: bold;
+     font-size: 1.4em;
+   }
+   .izquierda{
+     float: left;
+     margin-left: 3%;
+     width: 2%;
+     height: 10%;
+     opacity: 0.5;
+     background-color: black;
+     border-color: black;
+     color: white;
+     font-weight: bold;
+     font-size: 1.4em;
+
+   }
+   .izquierda:hover,.derecha:hover{
+     opacity:0.7;
+   }
+   .contenido{
+     margin-top: 20px;
+   }
+   .contenido div{
+     margin: 2% 0%;
+   }
+   .present{
+     margin-top: 100px;
+   }
+   .present img{
+     width: 19%;
+     border-radius: 50%;
+     float: left;
+     margin-right: 4%;
+   }
+   .item img{
+     width: 100%;
+     height: 100%;
+   }
+      .aptitudes p{
+     width: 120px;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 1.1em;
+    color: white;
+    background-color: cyan;
+    text-align: right;
+    border-radius: 5px;
+   }
+   .aptitudes:hover .wordpress{
+     width: 80%;
+   }
+   .aptitudes:hover .html5{
+     width: 95%;
+   }
+   .aptitudes:hover .css3{
+     width: 95%;
+   }
+   .aptitudes:hover .prestashop{
+     width: 80%;
+   }
+   .aptitudes:hover .seo{
+     width: 85%;
+   }
+   .aptitudes:hover .ajaxjson{
+     width: 80%;
+   }
+   .aptitudes:hover .jscript{
+     width: 95%;
+   }
+   .aptitudes:hover .photoshop{
+     width: 80%;
+   }
+   .aptitudes p {
+      -webkit-transition: 3s ease;
+      -moz-transition: 3s ease;
+      -ms-transition: 3s ease;
+      transition: 2s ease-in-out;
+    }
+    .estrecha{
+      margin-top: 10%;
+    }
+    .estrecha img{
+      width: 100%;
+      height: 300px;
+
+    }
+    /* -----aqui empieza el pie------ */
+   #mapa{
+     width: 25%;
+   }
+   .contacto ul li{
+     list-style-type: none;
+   }
+   .conocenos li{
+     list-style-type: none;
+     display: inline-block;
+     margin: 2%;
+   }
+
+   .conocenos{
+     text-align: center;
+     padding: 2% 15px;
+   }
+   .cita{
+     margin-top: 200px;
+     text-align: center;
+   }
+  .conocenos .fa-facebook-f,.conocenos .fa-linkedin-in,.conocenos .fa-twitter,.conocenos .fa-google-plus-g{
+    background: #205D7A;
+   color: #fff;
+   width: 30px;
+   height: 40px;
+   border-radius: 40%;
+   text-align: center;
+   margin-right: 10px;
+   font-size: 1.6rem;
+}
+.social .fa-facebook-f,.social .fa-linkedin-in,.social .fa-twitter,.social .fa-google-plus-g, .social .fa-whatsapp{
+font-size: 2.3em;
+}
+.social div div{
+  text-align: center;
+  vertical-align: middle;
+  width: 20%;
+  height: 60px;
+  background:#3b5998;
+  border-radius: 50%;
+
+}
+.conocenos .fa-facebook-f, .social .fa-facebook-f{
+  margin-top: 13px;
+   color: white;
+
+ }
+
+.conocenos .fa-linkedin-in,.social .fa-linkedin-in {
+  margin-top: 12px;
+   color: white;
+}
+.social div.li{
+  background: #0277bd;
+}
+.social div.go{
+  background: #d32f2f;
+}
+.social div.tw{
+  background: #64b5f6;
+}
+.social div.wh{
+  background: #64dd17;
+}
+.conocenos .fa-twitter, .social .fa-twitter{
+  margin-top: 12px;
+   color: white;
+ }
+.conocenos .fa-google-plus-g,.social .fa-google-plus-g {
+  margin-top: 12px;
+   color: white;
+}
+
+.social .fa-whatsapp{
+  margin-top: 12px;
+   color: white;
+}
+
+.conocenos .fa-facebook-f:hover,.conocenos .fa-linkedin-in:hover,.conocenos .fa-twitter:hover,.conocenos .fa-google-plus-g:hover {
+  background: white;
+  color: black;
+}
+#pie div{
+ text-align: center;
+}
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // $(".tercera,.segunda,.cuarta").css("display","none");
+        $(".tercera").hide();
+        $(".segunda").hide();
+        $(".cuarta").hide();
+        var contador = 0;
+        $(".izquierda").click(function(){
+          contador++;
+          if (contador==1) {
+            $(".primera").hide("slide");
+            $(".segunda").show("slide");
+          }else if (contador==2) {
+            $(".segunda").hide("slide");
+            $(".tercera").show("slide");
+
+          }else if (contador==3) {
+            $(".tercera").hide("slide");
+            $(".cuarta").show("slide");
+          }
+          else if (contador>3) {
+            $(".cuarta").hide("slide");
+            $(".primera").show("slide");
+            contador=0;
+          }
+        });
+        $(".derecha").click(function(){
+          contador++;
+          if (contador==1) {
+            $(".primera").hide();
+            $(".segunda").show("slide");
+          }else if (contador==2) {
+            $(".segunda").hide();
+            $(".tercera").show("slide");
+
+          }else if (contador==3) {
+            $(".tercera").hide();
+            $(".cuarta").show("slide");
+          }
+          else if (contador>3) {
+            $(".cuarta").hide();
+            $(".primera").show("slide");
+            contador=0;
+          }
+        });
+
+    });
+
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+    <div id="contenido">
+      <div class="row">
+        <header class="menu w-100 position-fixed sticky-top">
+
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+            <img id="logo" src="../logo1.png" alt="Logotipo de la pagina web">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Quienes Somos</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Eric.html">Eric</a>
+                    <a class="dropdown-item" href="Celia.html">Celia</a>
+                    <a class="dropdown-item" href="Javi.html">Javier</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="catalogo.html">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacto.html" id="navbarDropdown">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="blog.html">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+      </div>
+
+        <div class="">
+        <p>redes sociales LATERAL</p>
+        </div>
+        <div class="present row col-xl-12 col-lg-12">
+          <div class="aptitudes col-xl-6 col-lg-6 col-md-6">
+            <p class="wordpress">Wordpress</p>
+            <p class="prestashop">Prestashop</p>
+            <p class="html5">HTML5</p>
+            <p class="css3">CSS3</p>
+            <p class="photoshop">Photoshop</p>
+            <p class="jscript">JavaScript y jQuery</p>
+            <p class="ajaxjson">AJAX y JSON</p>
+            <p class="seo">SEO</p>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <img src="eric.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a href="#curriculum">PDF CURRICULUM</a>
+          </div>
+
+        </div>
+        <div class="primero row">
+          <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12">
+            <h1>Proyectos</h1>
+            <img src="underwood.jpg" alt="" class="primera">
+            <img src="tau.jpg" alt="" class="segunda">
+            <img src="pulsarS.jpg" alt="" class="tercera">
+            <img src="davia.jpg" alt="" class="cuarta">
+          </div>
+            <div class="botones col-xl-10 col-lg-10 col-md-10 col-sm-12">
+              <button type="button" name="button" class="izquierda"> <i class="fas fa-angle-left"></i> </button>
+              <button type="button" name="button" class="derecha"> <i class="fas fa-angle-right"></i> </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cita col-xl-12 col-lg-12 col-md-12">
+              <p>“El Diseño no es sólo como se ve o se siente, el diseño realmente funciona.”</p>
+              <caption><i>Steve Jobs</i></caption>
+            </div>
+
+          </div>
+          <div class="row ">
+            <div class="social col-xl-6 col-lg-6">
+              <div class="col-xl-6 col-lg-6 col-md-6">
+                <div><a href="http://facebook.com/" target="_blank" class="icon-facebook"><i class="fab fa-facebook-f"></i></a></div>
+                <div class="go"><a href="http://plus.google.com/" target="_blank" class="icon-plus"><i class="fab fa-google-plus-g"></i></a></div>
+                <div class="tw"><a href="http://twitter.com/" target="_blank" class="icon-twitter"><i class="fab fa-twitter"></i></a></div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="li"><a href="http://linkedin.com/" target="_blank" class="icon-linkedin"><i class="fab fa-linkedin-in"></i></a></div>
+                <div class=""><a href="http://infojobs.com/"><i class="">IF</i></a></li></div>
+                <div class="wh"><a href="#Whatshapp"><i class="fab fa-whatsapp"></i> </a></div>
+              </div>
+
+           </div>
+           <div class="col-xl-6 col-lg-6 col-md-6">
+             <p>mapa</p>
+           </div>
+
+          </div>
+        <div class="estrecha row col-xl-12 col-lg-12">
+          <img src="est5.jpg" alt="estrecha">
+        </div>
+
+      </div>
+    </div>
+    <div  id="pie" class="row  bg-dark text-white ">
+      <div class="row col-xl-6 col-lg-6 col-md-6">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h1>Contacta</h1>
+            <i class="fas fa-phone fa-2x"></i>
+            <a href="tel:+34555000555">555-000-555</a><br>
+            <i class="fas fa-at fa-2x"></i>
+            <a href="mail:correo@gmail.com">correo@gmail.com</a>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+          <h1>Servicios</h1>
+          <a href="#">Desarrollo web</a><br>
+          <a href="#">Desarrollo cliente</a><br>
+          <a href="#">Desarrollo Servidor</a>
+        </div>
+        <div class="conocenos col-xl-12 col-lg-12 col-md-12">
+          <ul>
+             <li><a href="http://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+             <li><a href="http://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+             <li><a href="http://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+             <li><a href="http://plus.google.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+         </ul>
+       </div>
+     </div>
+     <div class="oficinas col-xl-6 col-lg-6 col-md-6">
+        <h1>Oficinas</h1>
+        <!-- <img id="mapa" src="mapa.jpg" alt="mapa"> -->
+      </div>
+    </div>
+    </div>
+
+  </body>
+
+</html>
