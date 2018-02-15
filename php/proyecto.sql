@@ -4,20 +4,22 @@ CREATE TABLE users (
                     user_id bigint(20) unsigned NOT NULL auto_increment,
                     first_name varchar(100) NOT NULL,
                     last_name varchar(100) NOT NULL,
-                    age int(11) NOT NULL,
+                    empresa varchar(100) NOT NULL,
+                    email varchar(50) NOT NULL,
+                    telefono int(9) NOT NULL,
                     username varchar(50) NOT NULL,
                     password varchar(50) NOT NULL,
                     PRIMARY KEY (user_id)
                   );
 
--- Categorías de productos
+-- Categorías de productos serian los servicios que ofrecemos
 CREATE TABLE categories (
                     category_id bigint(20) unsigned NOT NULL auto_increment,
                     name varchar(150) NOT NULL,
                     description text NOT NULL,
                     PRIMARY KEY (category_id)
                 );
--- Marcas de productos
+-- Marcas de productos podrian ser nuestros datos, quien hace los proyectos
 CREATE TABLE brands (
                     brand_id bigint(20) unsigned NOT NULL auto_increment,
                     name varchar(150) NOT NULL,
@@ -25,7 +27,7 @@ CREATE TABLE brands (
                     img varchar(256) NOT NULL,
                     PRIMARY KEY (brand_id)
                 );
--- Productos
+-- Productos serian los proyectos
 CREATE TABLE products (
                     product_id bigint(20) unsigned NOT NULL auto_increment,
                     category_id bigint(20) unsigned NOT NULL,
@@ -33,8 +35,8 @@ CREATE TABLE products (
                     name varchar(150) NOT NULL,
                     description text NOT NULL,
                     img varchar(256) NOT NULL,
-                    price float NOT NULL,
-                    posted timestamp,
+                    -- price float NOT NULL,
+                    -- posted timestamp,
                     PRIMARY KEY (product_id),
                     FOREIGN KEY (category_id) REFERENCES categories (category_id),
                     FOREIGN KEY (brand_id) REFERENCES brands (brand_id)
@@ -76,9 +78,9 @@ CREATE TABLE stores (
                       );
 
 -- Inicializamos algunos valores de los registros.
-INSERT INTO users VALUES (1,'Juan','Sánchez',20,'jsanchez',md5('secret'));
-INSERT INTO users VALUES (2,'Antonia','González', 15,'agonzalez',md5('password'));
-INSERT INTO users VALUES (3,'Luisa','García', 18 ,'lgarcia',md5('topsecret'));
+INSERT INTO users VALUES (1,'Juan','Sánchez','Indra',"jsanchez@gmail.com",666555444,'jsanchez',md5('secret'));
+INSERT INTO users VALUES (2,'Antonia','González','Pulsar Space','agonzalez@gmail.com',666444555,'agonzalez',md5('password'));
+INSERT INTO users VALUES (3,'Luisa','García', 'davia','lgarcia@gmail.com',666777888 ,'lgarcia',md5('topsecret'));
 
 INSERT INTO categories VALUES (1,'Textil','Ropa, Calzado, Hogar');
 INSERT INTO categories VALUES (2,'Electrónica', 'Informática, electrónica de consumo');
