@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Codigo base</title>
+    <title>Servicios</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -8,7 +8,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/estiloServicios.css">
+	<link rel="stylesheet" href="css/estiloServicios.css">
+    <script type="text/javascript">
+		 $(document).ready(function() {
+            $('#tOnline').click(function(){
+            $('.nuestrosProy').css("display","block");
+            });
+            $('#Scms').click(function(){
+            $('.nuestrosProy').css("display","block");
+            });
+            $('#Smedida').click(function(){
+            $('.nuestrosProy').css("display","block");
+            });
+            $('#Sseo').click(function(){
+            $('.nuestrosProy').css("display","block");
+            });
+            $('#Scorp').click(function(){
+            $('.nuestrosProy').css("display","block");
+            });
+
+        });
+	</script>
 </head>
 
 <body>
@@ -65,65 +85,54 @@
               <h2>SERVICIOS</h2>
             </div>
             <div class="servicios1 bg-info-color col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-               <img src="inicio/tiendaOnline.png" alt="">
+               <img id="tOnline" class="imagen" src="inicio/tiendaOnline.png" alt="" onclick="verPorTienda()">
                <p>Tienda Online</p>
              </div>
              <div class="servicios1 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-               <img src="inicio/cms.png" alt="">
+               <img id="Scms"class="imagen" src="inicio/cms.png" alt="" onclick="verPorCms()">
                <p>CMS's</p>
              </div>
              <div class="servicios1 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                 <img src="inicio/webMedida.png" alt="">
+                 <img id="Smedida"class="imagen" src="inicio/webMedida.png" alt="" onclick="verPorMedida()">
                  <p>Web a medida</p>
              </div>
              <div class="servicios2 row">
                <div class="servicios1 col-xl-4 offset-xl-2 col-lg-4 offset-lg-2 col-md-4 offset-md-2 col-sm-4 col-4">
-                   <img src="inicio/seo.png" alt="">
+                   <img id="Sseo"class="imagen" src="inicio/seo.png" alt="" onclick="verPorSeo()">
                    <p>Posicionamiento SEO</p>
                </div>
                <div class="servicios1 col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                <img src="inicio/corporativa.png" alt="">
+                <img id="Scorp"class="imagen" src="inicio/corporativa.png" alt="" onclick="verPorCorp()">
                 <p>Corporativa</p>
               </div>
              </div>
-
           </div>
-        <!-- <div class="filtros">
-          <h3>Filtra entre nuestros proyectos:</h3>
-          <ul>
-            <li><button class="btn btn-info" onclick="verPorPrecioMas(p)">Más barato primero</button></li>
-            <li><button class="btn btn-info" onclick="verPorPrecioMenos(p)">Más caro primero</button></li>
-            <li><button class="btn btn-info" onclick="verPorUbicacion()">Tienda proximidad</button></li>
-            <li><button class="btn btn-info" onclick="verVegano()">Vegano</button></li>
-            <li><button class="btn btn-info" onclick="recarga()">Ver Todo</button></li>
-            <li><button class="btn btn-info" onclick="navegarCarrito()">Mi compra</button></li>
-            <li><button class="btn btn-info" onclick="condCompraOnline()">Condiciones compra online</button></li>
-          </ul>
-        </div>
+		<div class="nuestrosProy">
         <div id="cuerpo">
 
         </div>
         <script src="scripts/productos.js" charset="utf-8"></script>
         <script src="scripts/surtido.class.js" charset="utf-8"></script>
-        <script src="scripts/scriptHome.js" charset="utf-8"></script> -->
-        </div>
+        <script src="scripts/scriptHome.js" charset="utf-8"></script>
+   </div>
+		</div>
     </div>
     <div  id="pie" class="row  bg-dark text-white ">
       <div class="row col-xl-6 col-lg-6 col-md-6">
-        <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
           <h1>Contacta</h1>
             <i class="fas fa-phone fa-2x"></i>
             <a href="tel:+34555000555">555-000-555</a><br>
             <i class="fas fa-at fa-2x"></i>
             <a href="mail:correo@gmail.com">correo@gmail.com</a>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
           <h1>Servicios</h1>
           <a href="#">Desarrollo web</a><br>
           <a href="#">Desarrollo cliente</a><br>
           <a href="#">Desarrollo Servidor</a>
         </div>
-        <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
           <h1>Legalidad</h1>
           <a href="#">Aviso legal</a><br>
           <a href="#">Política de privacidad</a>
@@ -137,7 +146,7 @@
          </ul>
       </div>
     </div>
-      <div class="oficinas col-xl-3 col-lg-4 col-md-12">
+      <div class="oficinas col-xl-4 col-lg-4 col-md-12">
         <p id="coordenadas"></p>
         <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=Madrid,Spain&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C39.4548243,-0.3957476&markers=color:green%7Clabel:G%7C39.985539,-0.0504106&markers=color:red%7Clabel:C%7C39.4560627,-0.4033149&markers=color:pink%7Clabel:C%7C38.8634349,-6.9862087&key=AIzaSyByt5uPw-KnKfQTNCaYgMQTkVY0-NpJ2u8" alt="mapa">
       </div>

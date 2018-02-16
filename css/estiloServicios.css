@@ -1,31 +1,47 @@
-ul {
-  padding-bottom: 20px;
+*{
+	text-align: center;
 }
-li{
-  display: inline-block;
-  font-size: 1em;
+.servicios{
+	text-align: center;
 }
-h1{
-  text-align: center;
-  font-family: Verdana, sans-serif;
-  color: white;
+.imagen{
+	width: 25%;
 }
-h2{
-  font-family: Verdana, sans-serif;
-}
-body{
-  text-align: center;
-}
-img {
-  width: 100px;
-  max-height: 120px;
-  margin: 5px;
-  float:left;
-}
-#cuerpo{
-  width: 80%;
-  margin: auto;
-}
-#cuerpo > div {
-  height: 130px;
-}
+ .servicios1 img{
+            width: 70%;
+            height: 230px;
+
+          }
+          .servicios2 img{
+            width: 70%;
+            height: 230px;
+          }
+          .servicios2, .servicios1{
+            margin-top: 3%;
+          }
+        .servicios{
+          margin-top: 30px;
+          padding: 4%;
+        }
+        .servicios1>p{
+          position: relative;
+          bottom: 28px;
+          color:#ffff;
+			    background-color:#000;
+			    padding:2px 10px;
+			    opacity:0.7;
+			    font-weight:bold;
+          width: 70%;
+          margin: auto;
+        }
+        .servicios1:hover img{
+          width: 75%;
+          height:250px;
+          opacity: 0.5;
+        }
+		.nuestrosProy{
+			display:none;
+		}
+		#cuerpo{
+			margin-left: 50%;
+		}

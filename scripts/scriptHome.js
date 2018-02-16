@@ -1,27 +1,19 @@
 var p = new Surtido(productos);
-var micompra=[productos[0],productos[1],productos[2],productos[3],productos[4],productos[5],productos[6],productos[7]];
-p.dibujarSurtido(micompra);
+var servicios=[productos[0],productos[1],productos[2],productos[3],productos[4],productos[5],productos[6],productos[7]];
+p.dibujarSurtido(servicios);
 
-function recarga(){
-document.location.reload();
+function verPorCms() {
+  p.dibujarSurtido(p.filtrarCms());
 }
-function verPorPrecioMas(p) {
-  p.ordenPorPrecioMas();
-  p.dibujarSurtido();
+function verPorTienda() {
+  p.dibujarSurtido(p.filtrarTiendas());
 }
-
-function verPorPrecioMenos(p) {
-  p.ordenPorPrecioMenos();
-  p.dibujarSurtido();
+function verPorSeo() {
+  p.dibujarSurtido(p.filtrarSeo());
 }
-
-function verVegano() {
-  p.dibujarSurtido(p.filtrarVegano());
+function verPorCorp() {
+  p.dibujarSurtido(p.filtrarCorp());
 }
-
-function condCompraOnline(){
-   window.open("cdc.html", "nuevo", "directories=no, location=no, menubar=no, scrollbars=yes, statusbar=no, tittlebar=no, width=800, height=800");
-}
-function navegarCarrito(){
-location.assign("carrito.html");
+function verPorMedida() {
+  p.dibujarSurtido(p.filtrarMedida());
 }
