@@ -3,12 +3,18 @@
     <title>Quienes Somos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+
+
+
+
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/QuienesSomos.css">
+
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -36,6 +42,21 @@
         //     xhr.send();
         //
         // }
+        $(function(){
+
+    	var
+    	w       = 500,
+    	h       = 700,
+    	l       = (screen.availWidth - w) / 2,
+    	t       = (screen.availHeight - h) / 2,
+    	popPage = '.icono';
+
+    	$(popPage).on('click',function(event){
+    		window.open(this.href,"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
+    		 return false;
+    	});
+
+    });
     </script>
 </head>
 
@@ -44,7 +65,7 @@
     <div id="contenido">
         <div class="row">
           <header class="menu w-100 position-fixed sticky-top">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
               <img id="logo" src="quienesSomos/logo1.png" alt="Logotipo de la pagina web">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -77,23 +98,27 @@
                   </li>
               </ul>
           </div>
+
           <div class="usuario">
             <ul>
               <li><a href="#"><i class="fas fa-user"></i></a></li>
             </ul>
           </div>
 
+
         </nav>
           </header>
         </div>
 
         <div id="cont" class="row pt-5">
+
             <div class="desarrolladores row col-xl-12 col-lg-12 col-md-12 col-sm-12">
               <h1>Desarrolladores:</h1><br>
                 <img id="javi" src="quienesSomos/javi.png" alt="Javi"  data-toggle="tooltip" data-placement="bottom" title="Javier Dart Belenguer. Desarrollador web">
                 <img id="eric" src="quienesSomos/eric.png" alt="Eric"  data-toggle="tooltip" data-placement="bottom" title="Eric!">
                 <img id="celia" src="quienesSomos/celia.png" alt="Celia"  data-toggle="tooltip" data-placement="bottom" title="Celia!">
               </div>
+
 
               <div class="row infoEmpresa col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <h1>Información de la empresa</h1>
