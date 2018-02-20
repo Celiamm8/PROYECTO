@@ -112,6 +112,7 @@ border-color: #1CA347;
   </style>
 
 <script type="text/javascript">
+
 $(function() {
 
     $('#login-form-link').click(function(e) {
@@ -139,34 +140,42 @@ $(function() {
 	l       = (screen.availWidth - w) / 2,
 	t       = (screen.availHeight - h) / 2,
 	popPage = '.icono';
+    console.log(t);
 
 	$(popPage).on('click',function(event){
-		window.open(this.href,"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
+    window.open(this.href,"window", "directories=no, location=no, menubar=no, scrollbars=yes, statusbar=no, toolbar = no, tittlebar=no, width=450, height=450 ,status = no");
+    // window.open(,"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
 		 return false;
 	});
+  $('#aceptar').on('click',function(event){
+    window.close();
+  window.open('contacto.html');
+
+  })
 
 });
 
  //validaciones del registro:
  addEventListener('DOMContentLoaded',function(e){
- //   function ponFoco(e){
- //     e.target.style.outline = "blue solid 2px";
- //
- //   }
- //
- //   function quitaFoco(){
- //     e.target.style.outline = "none";
- //   }
- // var inputs = document.getElementsByTagName('input');
- // for (var i = 0; i < (inputs.length -1) ; i++) {
- //   inputs[i].addEventListener('focus',ponFoco);
- //   inputs[i].addEventListener('blur',quitaFoco);
- // }
+   //   function ponFoco(e){
+   //     e.target.style.outline = "blue solid 2px";
+   //
+   //   }
+   //
+   //   function quitaFoco(){
+   //     e.target.style.outline = "none";
+   //   }
+   // var inputs = document.getElementsByTagName('input');
+   // for (var i = 0; i < (inputs.length -1) ; i++) {
+   //   inputs[i].addEventListener('focus',ponFoco);
+   //   inputs[i].addEventListener('blur',quitaFoco);
+   // }
+
 
  //validaciones del formulario
 
- document.getElementById('formulario').addEventListener('submit',function(e){
-
+ document.getElementById('register-form').addEventListener('submit',function(e){
+    e.preventDefault();
 
    //campo para los errores
 
@@ -222,6 +231,79 @@ $(function() {
  });
      });
 
+  //validamos el usuario y la Contraseña
+  addEventListener('DOMContentLoaded',function(e){
+
+  //validaciones del formulario
+
+  document.getElementById('login-form').addEventListener('submit',function(e){
+     e.preventDefault();
+
+    //campo para los errores
+
+    var error = document.getElementsByClassName('errores')[0];
+
+    //lista de errores
+     var lista = "";
+
+     // lo que devuelve cuando acabe la validaciones
+
+     var ret =  false;
+
+     // validamos el nombre
+
+     var nom = document.getElementById('usuario').value;
+     if ( !nom || !(/^\S+[\s?\S+]*$/.test(nom))){
+          lista += "El nombre de usuario es incorrecto<br/>"
+          ret = false;
+     }
+
+
+        //validamos la contraseña
+          var contraseña = document.getElementById('pass').value;
+          if( !(/^\d{9}$/(/^\S+[\s?\S+]*$/.test(contraseña)) ) ){
+           lista += "la contraseña es incorrecta<br/>"
+           ret = false;
+         }
+
+        if(ret){
+          document.getElementById('aceptar').value = "Enviando..";
+          document.getElementById("aceptar").disabled = true;
+          document.forms[0].submit();
+
+
+        }else{
+          error.style.color="red";
+           error.innerHTML = lista;
+        }
+
+
+
+
+  });
+      });
+
+
+
+
+// peticion ajax para usuario y Contraseña
+
+$(document).ready(function() {
+      $("button").click(function(){
+        $.post("php/login.php",
+        {//Aquí enviamos el formato por defecto de post x-www-url-encoded, si no decimos lo contrario
+            usuario: $("#usuario").val(),
+            password: $("#password").val()
+        },
+        function(datos, st){
+            resultado.innerHTML = "Respuesta: " + datos;
+            alert("Datos recibidos: " + datos + "\nEstado del envío: " + st);
+        });
+      });
+    });
+
+
+
 
 
 
@@ -252,35 +334,31 @@ $(function() {
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                <!--  INICIO DE SESION-->
+
+								<form id="login-form" method="post" role="form" style="display: block;">
 									<div class="form-group">
 										<input type="text" name="username" id="usuario" tabindex="1" class="form-control" placeholder="Usuario" value="">
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="contraseña" tabindex="2" class="form-control" placeholder="Contraseña">
+										<input type="password" name="password" id="pass" tabindex="2" class="form-control" placeholder="Contraseña">
 									</div>
-									<div class="form-group text-center">
-										<input type="checkbox" tabindex="3" class="" name="remember" id="recuerdame">
-										<label for="remember"> Recuerdame</label>
-									</div>
+
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Entrar">
+												<input type="submit" name="login-submit" id="aceptar" tabindex="4" class="form-control btn btn-login" value="Entrar">
 											</div>
+                      <div class="errores"></div>
 										</div>
 									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-lg-12">
-												<div class="text-center">
-													<a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Olvidaste Contraseña?</a>
-												</div>
-											</div>
-										</div>
-									</div>
+
 								</form>
-								<form id="register-form" action="contacto.html" method="post" role="form" style="display: none;">
+
+
+
+                <!-- REGISTRO -->
+								<form id="register-form" action="registrarse.php" method="post" role="form" style="display: none;">
 									<div class="form-group">
 										<input type="text" name="username" id="nombre" tabindex="1" class="form-control" placeholder="Usuario" value="">
 									</div>

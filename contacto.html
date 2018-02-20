@@ -81,6 +81,16 @@
 .pie .fa-instagram:hover{
   color: yellow;
 }
+.contenido {
+  margin-top: 15%;
+
+
+}
+#map {
+       height: 480;
+       width: 640;
+     }
+
 
 
 
@@ -88,24 +98,46 @@
     <script type="text/javascript">
 
 
-        $(function(){
+    //     $(function(){
+    //
+    //   var
+    //   w       = 500,
+    //   h       = 700,
+    //   l       = (screen.availWidth - w) / 2,
+    //   t       = (screen.availHeight - h) / 2,
+    //   popPage = '.icono';
+    //
+    //   $(popPage).on('click',function(event){
+    //     window.open(this.href,"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
+    //      return false;
+    //   });
+    //
+    // });
+    $(function(){
 
-      var
-      w       = 500,
-      h       = 700,
-      l       = (screen.availWidth - w) / 2,
-      t       = (screen.availHeight - h) / 2,
-      popPage = '.icono';
+	var
+	w       = 500,
+	h       = 700,
+	l       = (screen.availWidth - w) / 2,
+	t       = (screen.availHeight - h) / 2,
+	popPage = '.icono';
+    console.log(t);
 
-      $(popPage).on('click',function(event){
-        window.open(this.href,"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
-         return false;
-      });
+	$(popPage).on('click',function(event){
 
-    });
+    window.open(this.href,"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
+		 return false;
+	});
+  $('#login-submit').on('click',function(event){
+    window.close();
+  window.open('contacto.html');
+
+  })
+
+});
 
     // ocultar la solicitud de preosupuesto si no esta registrado
-      $('form').hide();
+      ;
 
         addEventListener('DOMContentLoaded',function(e){
         //   function ponFoco(e){
@@ -160,17 +192,30 @@
              lista += "Hay un error en el nombre de la empresa<br/>";
            }
                 //validamos el email
-                var email = document.getElementById("email").value;
-                if ( ! (/^\w+([\.\-\+]?\w+)*@\w+([\.\-]?\w+)*(\.\w{2,4})+$/.test(email)) ){
+                var email = document.getElementById('email').value;
+                console.log(email);
+                if ( !email || !(/^\w+@\w+\.\w+$/.test(email)) ){
                   lista += "El email es incorrecto <br/>";
-                  ret = false;
+                  error = false;
                 }
+
               //validamos el Telefono
+
                 var telefono = document.getElementById('telefono').value;
                 if( !(/^\d{9}$/.test(telefono)) ) {
                  lista += "El telefono es incorrecto <br/>"
                  ret = false;
                }
+               // validamos el selector
+                  var selector = document.getElementById('selector').value;
+                  if(selector == null || selector == 0){
+                    lista += "Tienes que escoger una opcion <br/>"
+                    ret = false;
+                  }
+
+
+
+
               if(ret){
                 document.getElementById('enviar').value = "Enviando..";
                 document.getElementById("enviar").disabled = true;
@@ -187,6 +232,9 @@
 
         });
             });
+
+    //GEOLOCALIZACION.
+  
 
 
     </script>
@@ -209,14 +257,14 @@
                     <a class="nav-link" href="inicio.html">Inicio</a>
                   </li>
                   <div class="btn-group">
-                    <button href="#" type="button" class="btn navbar btn-dark">Quienes somos</button>
+                    <button href="QuienesSomos.html" type="button" class="btn navbar btn-dark">Quienes somos</button>
                     <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <span class="sr-only"></span>
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Javier</a>
-                      <a class="dropdown-item" href="#">Eric</a>
-                      <a class="dropdown-item" href="#">Celia</a>
+                      <a class="dropdown-item" href="javi.html">Javier</a>
+                      <a class="dropdown-item" href="Eric/eric.html">Eric</a>
+                      <a class="dropdown-item" href="celia.html">Celia</a>
                     </div>
                   </div>
 
@@ -234,7 +282,7 @@
           </div>
           <div class="usuario">
             <ul>
-              <li><a href="#"><i class="fas fa-user"></i></a></li>
+              <li><a href="registro.html" class="icono"><i class="fas fa-user"></i></a></li>
             </ul>
           </div>
 
@@ -308,7 +356,14 @@
                   </div>
                 </div>
                 <div class="row col-lg-12">
-                  <img src="map.jpg" alt="" class="mapa">
+                  <p id="coordinates"></p>
+                   <p>Haz clic en un punto del mapa o en un marcador!</p>
+                   <div id="map"></div>
+                   <script src="geolocalizacion.js"></script>
+                   <script async defer
+                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgIXj_VJaqQ_SToSJ5R_97AthYlRakoyY&libraries=geometry">
+                   </script>
+
                 </div>
             </div>
         </div>
@@ -344,7 +399,8 @@
     </div>
       <div class="oficinas col-xl-3 col-lg-4 col-md-12">
         <p id="coordenadas"></p>
-        <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?center=Madrid,Spain&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C39.4548243,-0.3957476&markers=color:green%7Clabel:G%7C39.985539,-0.0504106&markers=color:red%7Clabel:C%7C39.4560627,-0.4033149&markers=color:pink%7Clabel:C%7C38.8634349,-6.9862087&key=AIzaSyByt5uPw-KnKfQTNCaYgMQTkVY0-NpJ2u8" alt="mapa">
+
+
       </div>
 
     </div>
