@@ -42,16 +42,16 @@ CREATE TABLE products (
                     FOREIGN KEY (brand_id) REFERENCES brands (brand_id)
                    );
 -- Carrito
-CREATE TABLE shoppingcarts (
-                    item_id bigint(20) unsigned NOT NULL auto_increment,
-                    user_id bigint(20) unsigned NOT NULL,
-                    product_id bigint(20) unsigned NOT NULL,
-                    item_number int unsigned NOT NULL,
-                    posted timestamp,
-                    PRIMARY KEY (item_id),
-                    FOREIGN KEY (user_id) REFERENCES users (user_id),
-                    FOREIGN KEY (product_id) REFERENCES products (product_id)
-                   );
+-- CREATE TABLE shoppingcarts (
+--                     item_id bigint(20) unsigned NOT NULL auto_increment,
+--                     user_id bigint(20) unsigned NOT NULL,
+--                     product_id bigint(20) unsigned NOT NULL,
+--                     item_number int unsigned NOT NULL,
+--                     posted timestamp,
+--                     PRIMARY KEY (item_id),
+--                     FOREIGN KEY (user_id) REFERENCES users (user_id),
+--                     FOREIGN KEY (product_id) REFERENCES products (product_id)
+--                    );
 
 -- Comentarios sobre los productos
 CREATE TABLE comments (
@@ -92,11 +92,11 @@ INSERT INTO brands VALUES (2,'Sony', 'Electrónica japonesa', '/img/sony_logo.jp
 INSERT INTO brands VALUES (3,'Findus', 'Verduras congeladas', '/img/findus_logo.jpg');
 INSERT INTO brands VALUES (4,'Nutella', 'Crema de cacao', '/img/nutella_logo.jpg');
 
-INSERT INTO `products`(`product_id`, `category_id`,`brand_id`, `name`, `description`, `img`,`price`, `posted`) VALUES
-  (1,1,1,'Pantalón','Pantalón vaquero', '/img/pvaquero.jpg', 49.99 ,NULL),
-  (2,2,2,'Radio','Aparato de radio', '/img/radio.jpg', 20, NULL),
-  (3,3,3,'Patata','Patata 50g', '/img/patata.jpg', 1.99 ,NULL),
-  (4,4,4,'Nutella','Crema de cacao 350 gr', '/img/botenutella.jpg', 2.99, NULL);
+INSERT INTO `products`(`product_id`, `category_id`,`brand_id`, `name`, `description`, `img`) VALUES
+  (1,1,1,'Pantalón','Pantalón vaquero', '/img/pvaquero.jpg'),
+  (2,2,2,'Radio','Aparato de radio', '/img/radio.jpg'),
+  (3,3,3,'Patata','Patata 50g', '/img/patata.jpg'),
+  (4,4,4,'Nutella','Crema de cacao 350 gr', '/img/botenutella.jpg');
 
 INSERT INTO `comments`(`user_id`, `product_id`,`rating`, `title`, `body`) VALUES
   (1,1,5, 'Los mejores', 'Nunca defraudan,realizan muy bien lo estipulado'),
@@ -104,12 +104,12 @@ INSERT INTO `comments`(`user_id`, `product_id`,`rating`, `title`, `body`) VALUES
   (3,2,3, 'No me gusta', 'No quisieron hacer mi pagina de gatitos'),
   (3,4,5 , 'Excelente', 'Mataría por un trabajo suyo');
 
-INSERT INTO `shoppingcarts`(`user_id`, `product_id`,`item_number`) VALUES
-  (1,1,1),
-  (1,4,1),
-  (2,3,10),
-  (3,2,1),
-  (3,2,1);
+-- INSERT INTO `shoppingcarts`(`user_id`, `product_id`,`item_number`) VALUES
+--   (1,1,1),
+--   (1,4,1),
+--   (2,3,10),
+--   (3,2,1),
+--   (3,2,1);
 
 INSERT INTO `stores`(`store_id`,`name`,`address`,`lat`,`lng`) VALUES
   (1,'Juan de Garay','c/Juan de Garay, 25, 46017 Valencia', 39.4548243, -0.3957476),
