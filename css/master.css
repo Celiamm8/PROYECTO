@@ -19,7 +19,7 @@ html {
    min-height: 260px;/* Set the fixed height of the footer here */
  }
   #logo{
-    width: 15%;
+    width: 10%;
     padding: 0;
   }
   #navbarSupportedContent{
@@ -55,14 +55,14 @@ html {
     text-align: center;
     padding: 2% 15px;
   }
- .fa-facebook-f,.fa-linkedin-in,.fa-twitter,.fa-google-plus-g{
-  width: 30px;
-  height: 40px;
+ .fa-facebook-f,.fa-linkedin-in,.fa-google-plus-g{
   text-align: center;
-  margin-right: 10px;
   font-size: 1.6rem;
 }
-
+.fa-twitter{
+  text-align: center;
+  font-size: 1em;
+}
 
 .fa-facebook-f {
   color:#3b5998;

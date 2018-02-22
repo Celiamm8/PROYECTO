@@ -1,0 +1,187 @@
+/* CSS GENERAL DE JAVI.HTML*/
+
+.yo{  /* CSS PRIMER DIV*/
+  margin-top: -200px;
+}
+/* CSS DE LA IMAGEN PROPIA*/
+  #javi{
+    margin-top: 150px;
+    width: 20%;
+    height: 30%;
+    margin-left: 20%;
+    float: left;
+    padding-right: 1%;
+  }
+  /*TITULO*/
+      h2{
+         margin-top:200px;
+         margin-right:  10%;
+         padding-left:  20%;
+      }
+
+      /*CITA EN AZUL*/
+     .comentario{
+    border-radius: 5px;
+    background-color: #62C0D5;
+    color: floralwhite;
+    padding: 10px;
+    width: 420px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5em;
+    margin-left: 10%;
+    margin-top: 15%
+    }
+    .comentario{
+      margin-top: 300px;
+    }
+    /*REDES SOCIALES EN LATERAL FIJO*/
+    .social {
+      padding: 0px;
+      position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+      margin-left: 0%; /* Establecemos la barra en la izquierda */
+      top: 30%; /* Bajamos la barra 250px de arriba a abajo */
+      z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+    }
+    .social ul {
+  		list-style: none;
+      margin-left: 0%;
+      padding: 0;
+  	}
+
+  	.social ul li a {
+      margin-left: 0%;
+  		display: inline-block;
+  		color:#fff;
+  		background: #000;
+  		padding: 15px 15px;
+  		text-decoration: none;
+  		-webkit-transition:all 500ms ease;
+  		-o-transition:all 500ms ease;
+  		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+  	}
+  	.social ul li .icon-facebook {background:	#dfe3ee; }
+  	.social ul li .icon-twitter {background: #c0deed; }
+  	.social ul li .icon-googleplus {background: #d95232;}
+  	.social ul li .icon-pinterest {background: #ae181f;}
+  	.social ul li .icon-mail {background: #666666;}
+  	.social ul li a:hover {
+  		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+  		padding: 15px 25px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+  	}
+    /*spotify*/
+    .spoty {
+      padding: 0px;
+      position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+      margin-left: 0%; /* Establecemos la barra en la izquierda */
+      top: 70%; /* Bajamos la barra 250px de arriba a abajo */
+      z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+    }
+    .spoty iframe{
+      width: 30%;
+      height: 20%;
+      transition:all 500ms ease;
+    }
+    .spoty iframe:hover{
+      width: 100%;
+      height: 20%;
+    }
+    /*MIS PROYECTOS*/
+    .fondo{
+      width: 100%;
+      height: 500px;
+      margin-top: 72px;
+      position: absolute;
+      z-index: -1;
+    }
+    .botones{
+      margin-top: 550px;
+      width: 100%;
+    }
+    .derecha{
+      float:center;
+      opacity: 0.2;
+      border: black;
+      background-color: black;
+      color: white;
+      font-size: 1em;
+    }
+    .izquierda{
+      float: center;
+      margin-left: 50%;
+      opacity: 0.2;
+      border: black;
+      background-color: black;
+      color: white;
+      font-size: 1em;
+    }
+    .izquierda:hover,.derecha:hover{
+      opacity:0.7;
+    }
+    .segunda ul,.tercera ul,.cuarta ul{
+      padding-left: 10px;
+    }
+    .primera,.segunda,.tercera.,.cuarta{
+      margin-bottom: 10px;
+    }
+    .contacto{
+      position:absolute;
+      z-index: 1;
+      color: white;
+      margin-top: 725px;
+
+    }
+
+    .contacto ul li{
+      list-style-type: none;
+    }
+    .contacto img{
+      width: 30%;
+      padding: 3%;
+    }
+    .contacto h1{
+      margin-bottom: 20px;
+    }
+
+    .primera{
+      background-color: black;
+      margin-top: -150px;
+      width: 100%;
+      height: 50%;
+    }
+    .segunda img{
+      margin-top: -200px;
+      background-color: black;
+      width: 100%;
+      height: 40%;
+    }
+    .tercera img{
+      margin-top: -200px;
+      background-color: black;
+      width: 100%;
+      height: 40%;
+    }
+    .cuarta img{
+      background-color: black;
+      margin-top: -200px;
+      width: 100%;
+      height: 40%;
+    }
+/*OTROS TRABAJOS*/
+    .otros{
+      text-align: center;
+    }
+    .rotulo img{
+      width: 10%;
+      height: 15%;
+    }
+    .musica{
+      margin-left: 25%;
+    }
+    .musica img{
+      width: 100%;
+      height: 40%;
+    }
+    #ejRot{
+      color:blue;
+      text-decoration: underline;
+    }

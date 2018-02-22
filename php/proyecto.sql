@@ -98,9 +98,11 @@ INSERT INTO `products`(`product_id`, `category_id`,`brand_id`, `name`, `descript
 
 INSERT INTO `comments`(`user_id`, `product_id`,`rating`, `title`, `body`) VALUES
   (1,1,5, 'Los mejores', 'Nunca defraudan,realizan muy bien lo estipulado'),
-  (2,1,4, 'No esperaba más', 'No están mal, equiparan el precio a la calidad'),
-  (3,2,3, 'No me gusta', 'No quisieron hacer mi pagina de gatitos'),
-  (3,4,5 , 'Excelente', 'Mataría por un trabajo suyo');
+  (2,1,3, 'No esperaba más', 'No están mal, equiparan el precio a la calidad'),
+  (2,4,5 , 'Excelente', 'Mataría por un trabajo suyo'),
+  (3,2,1, 'No me gusta', 'No quisieron hacer mi pagina de gatitos'),
+  (3,3,2 , 'Horrible', 'Es todo un desastre'),
+  (3,2,2 , 'Es una barbaridad', 'La pagina no tiene estilo propio , creo que mejor utilizo WIX');
 
 INSERT INTO `shoppingcarts`(`user_id`, `product_id`,`item_number`) VALUES
   (1,1,1),

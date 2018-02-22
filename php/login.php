@@ -12,8 +12,9 @@ try{
 
     $conn = DB::getDbConn();
 
-    $user=$_POST['usr'];
-    $pass=$_POST['pass'];
+    $user=$_POST['username'];
+    $pass=$_POST['password'];
+    $email= $_POST['email'];
 
     $param=(array(':user' => $user, ':pass'=>md5($pass)));
     $stmt = $conn->prepare("SELECT * FROM users WHERE username = :user AND password = :pass ");
@@ -22,7 +23,7 @@ try{
 
     if($stmt->rowcount()==1){
       $usuario = $stmt->fetch();
-
+      echo "hola";
       $cfg = Config::getInstance();
       $key = $cfg->get(ConfigKeys::JSON_TOKEN_KEY);
 
@@ -33,9 +34,12 @@ try{
       header('Content-type: application/json');
       echo json_encode($ok);
     }else{
-      $error = array('estatus'=>0, 'msg'=>'Error en login');
-      header('Content-type: application/json');
-      echo json_encode($error);
+      // $error = array('estatus'=>0, 'msg'=>'Error en login');
+      // header('Content-type: application/json');
+      // echo json_encode($error);
+      echo "hola";
+      $insertar = "INSERT INTO users(username,last_name,password) VALUES('$user','$email','$pass');";
+      
     }
     break;
 

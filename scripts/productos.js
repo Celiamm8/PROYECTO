@@ -2,7 +2,7 @@ var productos = [
   {
     nombre:'CMS: Joomla',
     descripcion: 'Pagina realizada en Joomla por Javier Dart Belenguer',
-	foto:'/javi/anim1.png',
+	foto:"/javi/fondo1.png",
     cms: true,
 	tienda: false,
 	seo: false,

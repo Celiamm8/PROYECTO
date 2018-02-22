@@ -23,40 +23,36 @@
             $(location.assign("celia.html"));
           });
           $('#javi').click(function(){
-            $(window.open("javi.html"));
+           $(location.assign("javi.html"));
           });
           $('#eric').click(function(){
-            $(window.open("eric.html"));
+            $(location.assign("eric.html"));
           });
-        });
-        // var xhr = new XMLHttpRequest();
-        // onload = function(){
-        //     var str = Math.floor(Math.random() * (5 - 1)) + 1;
-        //     console.log(str);
-        //     xhr.open("GET","php/comments.php?stmt=" + str, true);
-        //     xhr.onreadystatechange = function(){
-        //       if (xhr.readyState == 4 && xhr.status == 200){
-        //         resultado.innerHTML = xhr.responseText;
-        //       }
-        //     }
-        //     xhr.send();
-        //
-        // }
-        $(function(){
 
-    	var
-    	w       = 500,
-    	h       = 700,
-    	l       = (screen.availWidth - w) / 2,
-    	t       = (screen.availHeight - h) / 2,
-    	popPage = '.icono';
+          //comentarios positivos
+          var aleatorio = Math.floor(Math.random() * (4 - 1)) + 1;
+         $.get("php/comments.php?comment_id="+aleatorio,function(datos,st){
+           console.log(datos.comments[0].body);
+           $("#resultado1").html(datos.comments[0].body);
+           if (st != "success") {
+             alert("Error: " + st);
+           }
+       });
+        //comentarios negativos
+       var aleatorio2 = Math.floor(Math.random() * (7 - 4)) + 4;
+       $.get("php/comments.php?comment_id="+aleatorio2,function(datos,st){
+           $("#resultado2").html(datos.comments[0].body);
 
-    	$(popPage).on('click',function(event){
-    		window.open(this.href,"window","width= "+ w + ",height=" + h + ",left=" + l + ",top=" + t + ", scrollbars = yes, location = no, toolbar = no, menubar = no, status = no");
-    		 return false;
-    	});
+         if (st != "success") {
+           alert("Error: " + st);
+         }
+     });
+     //boton QS
+     $('#QS').click(function(){
+       $(location.assign("QuienesSomos.html"));
+     });
+     });
 
-    });
     </script>
 </head>
 
@@ -77,18 +73,18 @@
                     <a class="nav-link" href="inicio.html">Inicio</a>
                   </li>
                   <div class="btn-group">
-                    <button href="#" type="button" class="btn navbar btn-dark">Quienes somos</button>
+                    <button id="QS" href="QuienesSomos.html" type="button" class="btn navbar btn-dark">Quienes somos</button>
                     <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <span class="sr-only"></span>
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Javier</a>
-                      <a class="dropdown-item" href="#">Eric</a>
-                      <a class="dropdown-item" href="#">Celia</a>
+                      <a class="dropdown-item" href="Javi.html">Javier</a>
+                      <a class="dropdown-item" href="Eric.html">Eric</a>
+                      <a class="dropdown-item" href="Celia.html">Celia</a>
                     </div>
                   </div>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
+                    <a class="nav-link" href="Servicios.html">Servicios</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="contacto.html">Contacto</a>
@@ -122,19 +118,20 @@
 
               <div class="row infoEmpresa col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <h1>Información de la empresa</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                <p>Somos JECDesign una empresa joven y emprendedora, nos dedicamos al servicio de desarrollo y diseño web.<br>
+                Somos tres personas que estudiamos juntos aun que cada uno ha seguido un camino distinto para especializarse en lo suyo.<br>
+                 Asi que decidimos al acabar nuestros estudios en montar nuestra propia empresa ya que teniamos diversos gustos y habilidades a la hora de desarrollar una Web.<br>
+                 Después de mucho esfuerzo todo tiene su recompesas, por eso somos una empresa con una gran iniciativa en el mundo digital, difrutamos de lo que hacemos. </p>
               </div>
               <div class="row comments col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div class="comments comentarios col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="comments comentarios col-xl-5 col-lg-5 col-md-5 col-sm-12">
                   <img id="avatar" src="quienesSomos/av1.png" alt="avatar">
-                  <div id="resultado" class="comentario">
-                    Me encanta!
-                  </div>
-                  <img id="avatar" src="quienesSomos/av1.png" alt="avatar">
-                  <div id="resultado" class="comentario">
-                    Les odio!
-                  </div>
+                  <div id="resultado1" class="comentario"></div>
                 </div>
+                  <div class="comments comentarios col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                    <img id="avatar" src="quienesSomos/av1.png" alt="avatar">
+                    <div id="resultado2" class="comentario"></div>
+                  </div>
               </div>
 
               <div class="row video col-xl-12 col-lg-12 col-md-12 col-sm-12">
