@@ -8,8 +8,8 @@
 	width: 25%;
 }
  .servicios1 img{
-            width: 70%;
-            height: 230px;
+            width: 75%;
+            height: 15.625em
 
           }
           .servicios2 img{
@@ -35,7 +35,7 @@
           margin: auto;
         }
         .servicios1:hover img{
-          width: 75%;
+          width: 80%;
           height:250px;
           opacity: 0.5;
         }

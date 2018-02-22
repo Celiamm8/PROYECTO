@@ -27,6 +27,9 @@
             $('.nuestrosProy').css("display","block");
             });
 
+            $('#QS').click(function(){
+              $(location.assign("QuienesSomos.html"));
+            });
         });
 	</script>
 </head>
@@ -48,18 +51,18 @@
                     <a class="nav-link" href="inicio.html">Inicio</a>
                   </li>
                   <div class="btn-group">
-                    <button href="#" type="button" class="btn navbar btn-dark">Quienes somos</button>
+                    <button id="QS" href="#" type="button" class="btn navbar btn-dark">Quienes somos</button>
                     <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <span class="sr-only"></span>
                     </button>
                     <div class="dropdown-menu">
-                      <a class="dropdown-item" href="#">Javier</a>
-                      <a class="dropdown-item" href="#">Eric</a>
-                      <a class="dropdown-item" href="#">Celia</a>
+                      <a class="dropdown-item" href="Javi.html">Javier</a>
+                      <a class="dropdown-item" href="Eric.html">Eric</a>
+                      <a class="dropdown-item" href="Celia.html">Celia</a>
                     </div>
                   </div>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
+                    <a class="nav-link" href="Servicios.html">Servicios</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="contacto.html">Contacto</a>
@@ -71,7 +74,7 @@
           </div>
           <div class="usuario">
             <ul>
-              <li><a href="#"><i class="fas fa-user"></i></a></li>
+              <li><a href="registro.html"><i class="fas fa-user"></i></a></li>
             </ul>
           </div>
 

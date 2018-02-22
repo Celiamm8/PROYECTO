@@ -8,15 +8,14 @@ html {
    min-height: 100%;
  }
  body {
-   margin-bottom: 30%; /* Margin bottom by footer height */
+   margin-bottom: 550px;
  }
-
  #pie {
    position: absolute;
    bottom: 0;
    width: 100%;
-   max-height: 60%;
-   min-height: 260px;/* Set the fixed height of the footer here */
+   max-height: 30%;
+   min-height: 10%;/* Set the fixed height of the footer here */
  }
   #logo{
     width: 10%;

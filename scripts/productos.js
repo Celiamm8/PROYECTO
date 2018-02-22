@@ -2,7 +2,7 @@ var productos = [
   {
     nombre:'CMS: Joomla',
     descripcion: 'Pagina realizada en Joomla por Javier Dart Belenguer',
-	foto:"/javi/fondo1.png",
+	foto:"scripts/productos/cms1.jpg",
     cms: true,
 	tienda: false,
 	seo: false,
@@ -12,7 +12,7 @@ var productos = [
   {
     nombre:'cms',
     descripcion: 'alalalalla.',
-	foto:'foto',
+	foto:'scripts/productos/cms2.jpg',
     cms: true,
 	tienda: false,
 	seo: false,
@@ -22,7 +22,7 @@ var productos = [
   {
     nombre:'Tienda',
     descripcion: 'kjkljklhk',
-	foto:'foto',
+	foto:'scripts/productos/tienda1.jpeg',
 	cms: false,
 	tienda: true,
 	seo: false,
@@ -31,8 +31,8 @@ var productos = [
   },
   {
     nombre:'seo',
-    descripcion: 'ñlñlklklñkjlkj',
-	foto:'foto',
+    descripcion: 'asdasd',
+	foto:'scripts/productos/seo2.jpg',
     cms: false,
 	tienda: false,
 	seo: true,
@@ -42,7 +42,7 @@ var productos = [
   {
     nombre:'Web a medida',
     descripcion: 'kjjkhjjhjkjjhhjhjj',
-	foto:'foto',
+	foto:'scripts/productos/pers1.jpg',
     cms: false,
 	tienda: false,
 	seo: false,
@@ -52,7 +52,7 @@ var productos = [
   {
     nombre:'web corporativa',
     descripcion: 'lkjkjkjglgkljgkgkghklghghhj',
-	foto:'foto',
+	foto:'scripts/productos/seo1.png',
     cms: false,
 	tienda: false,
 	seo: false,
@@ -61,8 +61,8 @@ var productos = [
   },
   {
     nombre:'cms',
-    descripcion: 'Dkhjhjhjhjyuiiuityyufghf',
-	foto:'foto',
+    descripcion: 'cms cms',
+	foto:'scripts/productos/cms3.jpg',
 	cms: true,
 	tienda: false,
 	seo: false,
@@ -72,7 +72,7 @@ var productos = [
   {
     nombre:'tienda',
     descripcion: 'phgdghjkñlhg',
-    foto:'foto',
+    foto:'scripts/productos/tienda2.jpeg',
     cms: false,
 	tienda: true,
 	seo: false,

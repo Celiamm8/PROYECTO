@@ -40,10 +40,12 @@ function Surtido(productos){
 
 
       this.dibujarSurtido = function(produ){
+
         cuerpo.innerHTML = " ";
         var str = "";
         if (produ == undefined) {
           for (var i = 0; i < this.productos.length; i++) {
+            console.log(this.productos.foto);
             str += "<div>";
             str += "<img src=" +this.productos[i].foto + " alt = '"
             str += this.productos[i].nombre+"'>";
