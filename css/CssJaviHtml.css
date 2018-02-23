@@ -1,5 +1,7 @@
 /* CSS GENERAL DE JAVI.HTML*/
-
+body{
+  color:#fff;
+}
 .yo{  /* CSS PRIMER DIV*/
   margin-top: -200px;
 }
@@ -188,8 +190,24 @@
       color:blue;
       text-decoration: underline;
     }
+    /*lenguajes*/
     .lenguajes{
       text-align: center;
       margin-top: 150px;
       margin-bottom: 100px;
+    }
+    .fa-html5{
+      color:orange;
+    }
+    .fa-css3{
+      color:blue;
+    }
+    .fa-js{
+      color:green;
+    }
+    .fa-php{
+      color:#000000;
+    }
+    .fa-laravel{
+      color:red;
     }
